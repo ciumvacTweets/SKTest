@@ -9,12 +9,14 @@
 #import "MainMenuViewController.h"
 #import "MainMenuView.h"
 #import "MainMenuHandler.h"
+#import "RegisterHandler.h"
+#import "RegisterViewController.h"
 
-@interface MainMenuViewController ()
+@interface MainMenuViewController () <MainMenuViewDelegate>
 
 
 @property (strong, nonatomic) MainMenuHandler *handler;
-
+@property (readonly) MainMenuView *mainMenuView;
 @end
 
 @implementation MainMenuViewController
@@ -40,6 +42,7 @@
     [super viewDidLoad];
     
     
+    self.mainMenuView.delegate = self;
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -58,9 +61,46 @@
 
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+-(void)showAlert:(UIAlertController *)alertController {
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
 
+-(void)pushToController:(NSInteger )tag {
+    
+    switch (tag) {
+            
+        case 1: {
+            
+                    [self.navigationController pushViewController:[self registerViewController]
+                                                         animated:YES];
+                    break;
+                }
+        
+        case 2: {
+            
+                    break;
+                }
+            
+        case 3: {
+            
+                    break;
+                }
+        default:
+            break;
+    }
+}
+
+-(RegisterViewController *)registerViewController {
+    
+    RegisterHandler *registerHandler = [[RegisterHandler alloc] init];
+    
+    return [[RegisterViewController alloc] initWithHandler:registerHandler];
+}
 @end

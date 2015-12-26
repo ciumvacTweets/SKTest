@@ -15,30 +15,141 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5ym-cx-4Et">
+                <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5ym-cx-4Et" customClass="ParallaxBackgroundView">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <animations/>
                     <variation key="heightClass=regular" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                     </variation>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zer-r0-ySd" customClass="SKBorderedButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="U00-dh-dZA"/>
+                        <constraint firstAttribute="width" constant="102" id="vPJ-2d-4gK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Country">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="U00-dh-dZA"/>
+                            <exclude reference="vPJ-2d-4gK"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="U00-dh-dZA"/>
+                            <include reference="vPJ-2d-4gK"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="countryTap:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="eua-eW-zt2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmr-Mb-pNJ" customClass="SKBorderedButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="SrV-9w-FIF"/>
+                        <constraint firstAttribute="width" constant="102" id="anf-ac-VSB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Contacts">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="SrV-9w-FIF"/>
+                            <exclude reference="anf-ac-VSB"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="SrV-9w-FIF"/>
+                            <include reference="anf-ac-VSB"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="contactsTap:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="lXQ-b4-FJS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUL-6e-Siq" customClass="SKBorderedButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="DXC-Xk-4xC"/>
+                        <constraint firstAttribute="width" constant="102" id="Ul9-G9-6BS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Register">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="DXC-Xk-4xC"/>
+                            <exclude reference="Ul9-G9-6BS"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="DXC-Xk-4xC"/>
+                            <include reference="Ul9-G9-6BS"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="registerTap:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="7Xr-b3-Pzz"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EUL-6e-Siq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="243" id="6U3-Hx-zY7"/>
+                <constraint firstItem="EUL-6e-Siq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HYt-LF-SXw"/>
+                <constraint firstItem="EUL-6e-Siq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="243" id="Ioc-sB-UDf"/>
+                <constraint firstItem="Dmr-Mb-pNJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b00-oQ-EPk"/>
+                <constraint firstItem="Zer-r0-ySd" firstAttribute="top" secondItem="EUL-6e-Siq" secondAttribute="bottom" constant="49" id="djF-7L-f0T"/>
+                <constraint firstItem="Zer-r0-ySd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kJN-nf-3dI"/>
+                <constraint firstItem="Dmr-Mb-pNJ" firstAttribute="top" secondItem="Zer-r0-ySd" secondAttribute="bottom" constant="38" id="ljr-Uw-IjB"/>
+            </constraints>
             <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="5ym-cx-4Et"/>
+                    <exclude reference="Zer-r0-ySd"/>
+                    <exclude reference="Dmr-Mb-pNJ"/>
+                    <exclude reference="EUL-6e-Siq"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="6U3-Hx-zY7"/>
+                    <exclude reference="HYt-LF-SXw"/>
+                    <exclude reference="Ioc-sB-UDf"/>
+                    <exclude reference="djF-7L-f0T"/>
+                    <exclude reference="kJN-nf-3dI"/>
+                    <exclude reference="b00-oQ-EPk"/>
+                    <exclude reference="ljr-Uw-IjB"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
                 <mask key="subviews">
                     <include reference="5ym-cx-4Et"/>
+                    <include reference="Zer-r0-ySd"/>
+                    <include reference="Dmr-Mb-pNJ"/>
+                    <include reference="EUL-6e-Siq"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="6U3-Hx-zY7"/>
+                    <include reference="HYt-LF-SXw"/>
+                    <include reference="Ioc-sB-UDf"/>
+                    <include reference="djF-7L-f0T"/>
+                    <include reference="kJN-nf-3dI"/>
+                    <include reference="b00-oQ-EPk"/>
+                    <include reference="ljr-Uw-IjB"/>
                 </mask>
             </variation>
-            <connections>
-                <outlet property="backgoundImageView" destination="5ym-cx-4Et" id="Uj3-LU-q6t"/>
-            </connections>
         </view>
     </objects>
     <resources>

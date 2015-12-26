@@ -7,14 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParallaxBackgroundView.h"
 
 @protocol MainMenuViewDelegate <NSObject>
 
-@property (weak, nonatomic) id<MainMenuViewDelegate> delegate;
+-(void)showAlert:(UIAlertController *)alertController;
+-(void)pushToController:(NSInteger)tag;
 
 @end
 
+
+
 @interface MainMenuView : UIView
 
+
+@property (weak, nonatomic) id<MainMenuViewDelegate> delegate;
+
+- (IBAction)registerTap:(id)sender;
+- (IBAction)countryTap:(id)sender;
+- (IBAction)contactsTap:(id)sender;
 
 @end

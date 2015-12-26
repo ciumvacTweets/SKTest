@@ -35,6 +35,30 @@
 		84E3A4741C2C978000ED97DF /* CountryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4731C2C978000ED97DF /* CountryAPI.m */; };
 		84E3A4751C2C978000ED97DF /* CountryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4731C2C978000ED97DF /* CountryAPI.m */; };
 		84E3A4761C2C978000ED97DF /* CountryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4731C2C978000ED97DF /* CountryAPI.m */; };
+		84E3A47D1C2EC31B00ED97DF /* SKBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A47C1C2EC31B00ED97DF /* SKBorderedButton.m */; };
+		84E3A47E1C2EC31B00ED97DF /* SKBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A47C1C2EC31B00ED97DF /* SKBorderedButton.m */; };
+		84E3A47F1C2EC31B00ED97DF /* SKBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A47C1C2EC31B00ED97DF /* SKBorderedButton.m */; };
+		84E3A4901C2F07EE00ED97DF /* SKCustomTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A48F1C2F07EE00ED97DF /* SKCustomTextfield.m */; };
+		84E3A4911C2F07EE00ED97DF /* SKCustomTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A48F1C2F07EE00ED97DF /* SKCustomTextfield.m */; };
+		84E3A4921C2F07EE00ED97DF /* SKCustomTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A48F1C2F07EE00ED97DF /* SKCustomTextfield.m */; };
+		84E3A4991C2F17B200ED97DF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4981C2F17B200ED97DF /* RegisterViewController.m */; };
+		84E3A49A1C2F17B200ED97DF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4981C2F17B200ED97DF /* RegisterViewController.m */; };
+		84E3A49B1C2F17B200ED97DF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4981C2F17B200ED97DF /* RegisterViewController.m */; };
+		84E3A4A31C2F187100ED97DF /* RegisterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4A21C2F187100ED97DF /* RegisterHandler.m */; };
+		84E3A4A41C2F187100ED97DF /* RegisterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4A21C2F187100ED97DF /* RegisterHandler.m */; };
+		84E3A4A51C2F187100ED97DF /* RegisterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4A21C2F187100ED97DF /* RegisterHandler.m */; };
+		84E3A4A81C2F1C1400ED97DF /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4A71C2F1C1400ED97DF /* RegisterView.m */; };
+		84E3A4A91C2F1C1400ED97DF /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4A71C2F1C1400ED97DF /* RegisterView.m */; };
+		84E3A4AA1C2F1C1400ED97DF /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4A71C2F1C1400ED97DF /* RegisterView.m */; };
+		84E3A4AC1C2F1CA400ED97DF /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E3A4AB1C2F1CA400ED97DF /* RegisterView.xib */; };
+		84E3A4AD1C2F1CA400ED97DF /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E3A4AB1C2F1CA400ED97DF /* RegisterView.xib */; };
+		84E3A4AE1C2F1CA400ED97DF /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E3A4AB1C2F1CA400ED97DF /* RegisterView.xib */; };
+		84E3A4B01C2F1F6400ED97DF /* Background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84E3A4AF1C2F1F6400ED97DF /* Background2.jpg */; };
+		84E3A4B11C2F1F6400ED97DF /* Background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84E3A4AF1C2F1F6400ED97DF /* Background2.jpg */; };
+		84E3A4B21C2F1F6400ED97DF /* Background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84E3A4AF1C2F1F6400ED97DF /* Background2.jpg */; };
+		84E3A4BB1C2F2AF200ED97DF /* ParallaxBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4BA1C2F2AF200ED97DF /* ParallaxBackgroundView.m */; };
+		84E3A4BC1C2F2AF200ED97DF /* ParallaxBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4BA1C2F2AF200ED97DF /* ParallaxBackgroundView.m */; };
+		84E3A4BD1C2F2AF200ED97DF /* ParallaxBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4BA1C2F2AF200ED97DF /* ParallaxBackgroundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +83,7 @@
 		8413F04D1C2C008C000D44A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8413F04F1C2C008C000D44A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8413F0501C2C008C000D44A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8413F0581C2C008C000D44A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8413F0581C2C008C000D44A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../SKTest/Assets.xcassets; sourceTree = "<group>"; };
 		8413F05D1C2C008C000D44A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8413F0621C2C008C000D44A2 /* SKTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8413F0661C2C008C000D44A2 /* SKTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKTestTests.m; sourceTree = "<group>"; };
@@ -77,6 +101,20 @@
 		845D2BBE1C2C38D800D6CE79 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Background.jpg; path = ../../Resources/Background.jpg; sourceTree = "<group>"; };
 		84E3A4721C2C978000ED97DF /* CountryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountryAPI.h; path = API/CountryAPI.h; sourceTree = "<group>"; };
 		84E3A4731C2C978000ED97DF /* CountryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountryAPI.m; path = API/CountryAPI.m; sourceTree = "<group>"; };
+		84E3A47B1C2EC31B00ED97DF /* SKBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKBorderedButton.h; path = Helpers/SKBorderedButton.h; sourceTree = "<group>"; };
+		84E3A47C1C2EC31B00ED97DF /* SKBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKBorderedButton.m; path = Helpers/SKBorderedButton.m; sourceTree = "<group>"; };
+		84E3A48E1C2F07EE00ED97DF /* SKCustomTextfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKCustomTextfield.h; path = Helpers/SKCustomTextfield.h; sourceTree = "<group>"; };
+		84E3A48F1C2F07EE00ED97DF /* SKCustomTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKCustomTextfield.m; path = Helpers/SKCustomTextfield.m; sourceTree = "<group>"; };
+		84E3A4971C2F17B200ED97DF /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Register/RegisterViewController.h; sourceTree = "<group>"; };
+		84E3A4981C2F17B200ED97DF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Register/RegisterViewController.m; sourceTree = "<group>"; };
+		84E3A4A11C2F187100ED97DF /* RegisterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterHandler.h; path = Register/RegisterHandler.h; sourceTree = "<group>"; };
+		84E3A4A21C2F187100ED97DF /* RegisterHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterHandler.m; path = Register/RegisterHandler.m; sourceTree = "<group>"; };
+		84E3A4A61C2F1C1400ED97DF /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterView.h; path = Register/RegisterView.h; sourceTree = "<group>"; };
+		84E3A4A71C2F1C1400ED97DF /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterView.m; path = Register/RegisterView.m; sourceTree = "<group>"; };
+		84E3A4AB1C2F1CA400ED97DF /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterView.xib; path = Register/RegisterView.xib; sourceTree = "<group>"; };
+		84E3A4AF1C2F1F6400ED97DF /* Background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background2.jpg; sourceTree = "<group>"; };
+		84E3A4B91C2F2AF200ED97DF /* ParallaxBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParallaxBackgroundView.h; path = Helpers/ParallaxBackgroundView.h; sourceTree = "<group>"; };
+		84E3A4BA1C2F2AF200ED97DF /* ParallaxBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParallaxBackgroundView.m; path = Helpers/ParallaxBackgroundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +165,9 @@
 		8413F04B1C2C008C000D44A2 /* SKTest */ = {
 			isa = PBXGroup;
 			children = (
-				84E3A4711C2C96CE00ED97DF /* APIRequests */,
-				845D2BA01C2C143400D6CE79 /* mainMenu */,
+				84E3A4781C2EC1D000ED97DF /* Classes */,
 				8413F04F1C2C008C000D44A2 /* AppDelegate.h */,
 				8413F0501C2C008C000D44A2 /* AppDelegate.m */,
-				8413F0581C2C008C000D44A2 /* Assets.xcassets */,
-				8413F05D1C2C008C000D44A2 /* Info.plist */,
 				8413F04C1C2C008C000D44A2 /* Supporting Files */,
 			);
 			path = SKTest;
@@ -141,6 +176,7 @@
 		8413F04C1C2C008C000D44A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8413F05D1C2C008C000D44A2 /* Info.plist */,
 				8413F04D1C2C008C000D44A2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -158,21 +194,20 @@
 		8413F07F1C2C0C88000D44A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				845D2BBE1C2C38D800D6CE79 /* Background.jpg */,
-				8413F08B1C2C11A6000D44A2 /* iconHome.png */,
-				8413F08C1C2C11A6000D44A2 /* IconSpot.png */,
+				8413F0581C2C008C000D44A2 /* Assets.xcassets */,
+				84E3A4771C2EC1AF00ED97DF /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		845D2BA01C2C143400D6CE79 /* mainMenu */ = {
+		845D2BA01C2C143400D6CE79 /* mainMenuScreen */ = {
 			isa = PBXGroup;
 			children = (
 				845D2BB81C2C34D000D6CE79 /* handler */,
 				845D2BAF1C2C14D300D6CE79 /* View */,
 				845D2BB01C2C14E100D6CE79 /* Controller */,
 			);
-			name = mainMenu;
+			name = mainMenuScreen;
 			sourceTree = "<group>";
 		};
 		845D2BAF1C2C14D300D6CE79 /* View */ = {
@@ -210,6 +245,191 @@
 				84E3A4731C2C978000ED97DF /* CountryAPI.m */,
 			);
 			name = APIRequests;
+			sourceTree = "<group>";
+		};
+		84E3A4771C2EC1AF00ED97DF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4AF1C2F1F6400ED97DF /* Background2.jpg */,
+				845D2BBE1C2C38D800D6CE79 /* Background.jpg */,
+				8413F08B1C2C11A6000D44A2 /* iconHome.png */,
+				8413F08C1C2C11A6000D44A2 /* IconSpot.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		84E3A4781C2EC1D000ED97DF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4831C2EE9A800ED97DF /* ContactsScreen */,
+				84E3A4821C2EE97A00ED97DF /* CountrysScreen */,
+				84E3A4811C2EE95B00ED97DF /* RegisterScreen */,
+				845D2BA01C2C143400D6CE79 /* mainMenuScreen */,
+				84E3A4791C2EC28700ED97DF /* Helpers */,
+				84E3A4711C2C96CE00ED97DF /* APIRequests */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		84E3A4791C2EC28700ED97DF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4B31C2F200600ED97DF /* ParallaxView */,
+				84E3A48D1C2F07BE00ED97DF /* TextFields */,
+				84E3A47A1C2EC29000ED97DF /* Buttons */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		84E3A47A1C2EC29000ED97DF /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A47B1C2EC31B00ED97DF /* SKBorderedButton.h */,
+				84E3A47C1C2EC31B00ED97DF /* SKBorderedButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		84E3A4811C2EE95B00ED97DF /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4961C2F122C00ED97DF /* Model */,
+				84E3A4951C2F122200ED97DF /* Controller */,
+				84E3A4941C2F121B00ED97DF /* Handler */,
+				84E3A4931C2F121200ED97DF /* View */,
+			);
+			name = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		84E3A4821C2EE97A00ED97DF /* CountrysScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A48B1C2EEA3D00ED97DF /* Handler */,
+				84E3A48A1C2EEA3300ED97DF /* Model */,
+				84E3A4891C2EEA2900ED97DF /* Controller */,
+				84E3A4881C2EEA2300ED97DF /* View */,
+			);
+			name = CountrysScreen;
+			sourceTree = "<group>";
+		};
+		84E3A4831C2EE9A800ED97DF /* ContactsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4871C2EEA0500ED97DF /* View */,
+				84E3A4861C2EE9F500ED97DF /* Controller */,
+				84E3A4851C2EE9D600ED97DF /* Handler */,
+				84E3A4841C2EE9C400ED97DF /* Model */,
+			);
+			name = ContactsScreen;
+			sourceTree = "<group>";
+		};
+		84E3A4841C2EE9C400ED97DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84E3A4851C2EE9D600ED97DF /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Handler;
+			sourceTree = "<group>";
+		};
+		84E3A4861C2EE9F500ED97DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84E3A4871C2EEA0500ED97DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84E3A4881C2EEA2300ED97DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84E3A4891C2EEA2900ED97DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84E3A48A1C2EEA3300ED97DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84E3A48B1C2EEA3D00ED97DF /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Handler;
+			sourceTree = "<group>";
+		};
+		84E3A48D1C2F07BE00ED97DF /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A48E1C2F07EE00ED97DF /* SKCustomTextfield.h */,
+				84E3A48F1C2F07EE00ED97DF /* SKCustomTextfield.m */,
+			);
+			name = TextFields;
+			sourceTree = "<group>";
+		};
+		84E3A4931C2F121200ED97DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4A61C2F1C1400ED97DF /* RegisterView.h */,
+				84E3A4A71C2F1C1400ED97DF /* RegisterView.m */,
+				84E3A4AB1C2F1CA400ED97DF /* RegisterView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84E3A4941C2F121B00ED97DF /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4A11C2F187100ED97DF /* RegisterHandler.h */,
+				84E3A4A21C2F187100ED97DF /* RegisterHandler.m */,
+			);
+			name = Handler;
+			sourceTree = "<group>";
+		};
+		84E3A4951C2F122200ED97DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4971C2F17B200ED97DF /* RegisterViewController.h */,
+				84E3A4981C2F17B200ED97DF /* RegisterViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84E3A4961C2F122C00ED97DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84E3A4B31C2F200600ED97DF /* ParallaxView */ = {
+			isa = PBXGroup;
+			children = (
+				84E3A4B91C2F2AF200ED97DF /* ParallaxBackgroundView.h */,
+				84E3A4BA1C2F2AF200ED97DF /* ParallaxBackgroundView.m */,
+			);
+			name = ParallaxView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +536,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				845D2BAC1C2C14CA00D6CE79 /* MainMenuView.xib in Resources */,
+				84E3A4B01C2F1F6400ED97DF /* Background2.jpg in Resources */,
+				84E3A4AC1C2F1CA400ED97DF /* RegisterView.xib in Resources */,
 				8413F0901C2C11A6000D44A2 /* IconSpot.png in Resources */,
 				845D2BBF1C2C38D800D6CE79 /* Background.jpg in Resources */,
 				8413F0591C2C008C000D44A2 /* Assets.xcassets in Resources */,
@@ -328,9 +550,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8413F0911C2C11A6000D44A2 /* IconSpot.png in Resources */,
+				84E3A4AD1C2F1CA400ED97DF /* RegisterView.xib in Resources */,
 				845D2BC01C2C38D800D6CE79 /* Background.jpg in Resources */,
 				845D2BAD1C2C14CA00D6CE79 /* MainMenuView.xib in Resources */,
 				8413F08E1C2C11A6000D44A2 /* iconHome.png in Resources */,
+				84E3A4B11C2F1F6400ED97DF /* Background2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +563,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8413F0921C2C11A6000D44A2 /* IconSpot.png in Resources */,
+				84E3A4AE1C2F1CA400ED97DF /* RegisterView.xib in Resources */,
 				845D2BC11C2C38D800D6CE79 /* Background.jpg in Resources */,
 				845D2BAE1C2C14CA00D6CE79 /* MainMenuView.xib in Resources */,
 				8413F08F1C2C11A6000D44A2 /* iconHome.png in Resources */,
+				84E3A4B21C2F1F6400ED97DF /* Background2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,11 +578,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E3A4901C2F07EE00ED97DF /* SKCustomTextfield.m in Sources */,
 				8413F0511C2C008C000D44A2 /* AppDelegate.m in Sources */,
 				84E3A4741C2C978000ED97DF /* CountryAPI.m in Sources */,
 				845D2BA91C2C14CA00D6CE79 /* MainMenuViewController.m in Sources */,
+				84E3A4A81C2F1C1400ED97DF /* RegisterView.m in Sources */,
+				84E3A4991C2F17B200ED97DF /* RegisterViewController.m in Sources */,
+				84E3A4A31C2F187100ED97DF /* RegisterHandler.m in Sources */,
+				84E3A4BB1C2F2AF200ED97DF /* ParallaxBackgroundView.m in Sources */,
 				845D2BB41C2C2C7F00D6CE79 /* MainMenuView.m in Sources */,
 				845D2BBB1C2C354500D6CE79 /* MainMenuHandler.m in Sources */,
+				84E3A47D1C2EC31B00ED97DF /* SKBorderedButton.m in Sources */,
 				8413F04E1C2C008C000D44A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,8 +600,14 @@
 				845D2BB51C2C2C7F00D6CE79 /* MainMenuView.m in Sources */,
 				845D2BAA1C2C14CA00D6CE79 /* MainMenuViewController.m in Sources */,
 				84E3A4751C2C978000ED97DF /* CountryAPI.m in Sources */,
+				84E3A4911C2F07EE00ED97DF /* SKCustomTextfield.m in Sources */,
+				84E3A4A41C2F187100ED97DF /* RegisterHandler.m in Sources */,
 				8413F0671C2C008C000D44A2 /* SKTestTests.m in Sources */,
+				84E3A47E1C2EC31B00ED97DF /* SKBorderedButton.m in Sources */,
+				84E3A4BC1C2F2AF200ED97DF /* ParallaxBackgroundView.m in Sources */,
 				845D2BBC1C2C354500D6CE79 /* MainMenuHandler.m in Sources */,
+				84E3A49A1C2F17B200ED97DF /* RegisterViewController.m in Sources */,
+				84E3A4A91C2F1C1400ED97DF /* RegisterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,10 +615,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E3A47F1C2EC31B00ED97DF /* SKBorderedButton.m in Sources */,
 				845D2BB61C2C2C7F00D6CE79 /* MainMenuView.m in Sources */,
+				84E3A4921C2F07EE00ED97DF /* SKCustomTextfield.m in Sources */,
 				84E3A4761C2C978000ED97DF /* CountryAPI.m in Sources */,
+				84E3A49B1C2F17B200ED97DF /* RegisterViewController.m in Sources */,
+				84E3A4AA1C2F1C1400ED97DF /* RegisterView.m in Sources */,
 				845D2BBD1C2C354500D6CE79 /* MainMenuHandler.m in Sources */,
 				845D2BAB1C2C14CA00D6CE79 /* MainMenuViewController.m in Sources */,
+				84E3A4A51C2F187100ED97DF /* RegisterHandler.m in Sources */,
+				84E3A4BD1C2F2AF200ED97DF /* ParallaxBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +728,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: John May (U4AE5455Y9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John May (U4AE5455Y9)";
 				INFOPLIST_FILE = SKTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SK.SKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,7 +742,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: John May (U4AE5455Y9)";
 				INFOPLIST_FILE = SKTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SK.SKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
