@@ -57,7 +57,11 @@
         case 5: {
             
             validated ([self validatePassword:text]);
-            
+            break;
+        }
+        case 6: {
+            validated ([self validateBirthDate:text]);
+            break;
         }
         default:
             break;
@@ -72,7 +76,7 @@
     
         
         
-        NSString *nameFormat = @"^(?=.{3,})[a-zA-Z]+$"; //regex for Alphabetical characters only
+        NSString *nameFormat = @"^(?=.{3,})[a-zA-Z]+$"; //regex for 3+ Alphabetical characters
         
         NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameFormat];
         
@@ -104,6 +108,26 @@
         NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", validRegex];
         
         return [passwordTest evaluateWithObject:text];
+}
+
+-(BOOL)validateBirthDate:(NSString*)text {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+
+    [dateFormatter setDateFormat:@"MMM' 'dd','yyyy"];
+    NSDate *birthDate = [[NSDate alloc] init];
+
+    birthDate = [dateFormatter dateFromString:text];
+    
+    
+    NSDate* now = [NSDate date];
+    NSDateComponents* ageComponents = [[NSCalendar currentCalendar]
+                                       components:NSCalendarUnitYear
+                                       fromDate:birthDate
+                                       toDate:now
+                                       options:0];
+   
+    return [ageComponents year] >12 ? YES : NO ;
 }
 
 @end

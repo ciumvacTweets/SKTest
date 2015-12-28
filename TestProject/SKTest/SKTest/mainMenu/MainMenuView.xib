@@ -38,8 +38,7 @@
                             <exclude reference="vPJ-2d-4gK"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular" misplaced="YES">
-                        <rect key="frame" x="249" y="322" width="102" height="30"/>
+                    <variation key="heightClass=regular">
                         <mask key="constraints">
                             <include reference="U00-dh-dZA"/>
                             <include reference="vPJ-2d-4gK"/>
@@ -66,8 +65,7 @@
                             <exclude reference="anf-ac-VSB"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular" misplaced="YES">
-                        <rect key="frame" x="249" y="390" width="102" height="30"/>
+                    <variation key="heightClass=regular">
                         <mask key="constraints">
                             <include reference="SrV-9w-FIF"/>
                             <include reference="anf-ac-VSB"/>
@@ -94,8 +92,7 @@
                             <exclude reference="Ul9-G9-6BS"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular" misplaced="YES">
-                        <rect key="frame" x="249" y="243" width="102" height="30"/>
+                    <variation key="heightClass=regular">
                         <mask key="constraints">
                             <include reference="DXC-Xk-4xC"/>
                             <include reference="Ul9-G9-6BS"/>
@@ -125,12 +122,12 @@
                     <exclude reference="EUL-6e-Siq"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="b00-oQ-EPk"/>
+                    <exclude reference="ljr-Uw-IjB"/>
                     <exclude reference="HYt-LF-SXw"/>
                     <exclude reference="Qm6-0w-hH0"/>
                     <exclude reference="djF-7L-f0T"/>
                     <exclude reference="kJN-nf-3dI"/>
-                    <exclude reference="b00-oQ-EPk"/>
-                    <exclude reference="ljr-Uw-IjB"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -141,12 +138,12 @@
                     <include reference="EUL-6e-Siq"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="b00-oQ-EPk"/>
+                    <include reference="ljr-Uw-IjB"/>
                     <include reference="HYt-LF-SXw"/>
                     <include reference="Qm6-0w-hH0"/>
                     <include reference="djF-7L-f0T"/>
                     <include reference="kJN-nf-3dI"/>
-                    <include reference="b00-oQ-EPk"/>
-                    <include reference="ljr-Uw-IjB"/>
                 </mask>
             </variation>
         </view>

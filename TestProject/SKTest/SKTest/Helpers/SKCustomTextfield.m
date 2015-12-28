@@ -39,7 +39,7 @@
     
     self.backgroundColor = [UIColor whiteColor] ;
     
-    self.font = [UIFont fontWithName:@"ALNile" size:15];
+    self.font = [UIFont fontWithName:@"Helvetica-Neue" size:15];
     self.layer.borderColor = [[UIColor redColor] CGColor];
     
     

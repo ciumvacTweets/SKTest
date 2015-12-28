@@ -274,6 +274,9 @@
                                     <include reference="Rtk-AG-WUX"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="onNextTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="FG3-0C-Kqb"/>
+                            </connections>
                         </button>
                     </subviews>
                     <animations/>
@@ -427,10 +430,12 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="birthDateTextfield" destination="n5F-dD-2nx" id="1bc-3X-gO8"/>
                 <outlet property="emailConfirmationTextfield" destination="Xmf-w0-VBp" id="sNq-1E-36P"/>
                 <outlet property="emailTextfield" destination="hKR-d7-Kjt" id="bZA-I8-Ev2"/>
                 <outlet property="firstNameTextField" destination="PJI-Ki-mPH" id="nxs-r2-3Ve"/>
                 <outlet property="lastNameTextfield" destination="RPX-Ig-vST" id="Xzu-yN-pvF"/>
+                <outlet property="nextButton" destination="TvE-1q-fFy" id="zEO-oe-P3A"/>
                 <outlet property="passwordConfirmationTextfield" destination="pQZ-xy-J9Q" id="MBh-FJ-bgK"/>
                 <outlet property="passwordTextfield" destination="krF-ny-1lS" id="sRG-Kb-oli"/>
                 <outlet property="scrollView" destination="kGB-li-xJQ" id="48a-a6-rd9"/>

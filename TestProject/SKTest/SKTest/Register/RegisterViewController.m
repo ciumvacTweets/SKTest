@@ -40,7 +40,7 @@
     
     self.registerView.delegate = self;
     
-    _model = [[RegisterModel alloc] init];
+    self.model = [[RegisterModel alloc] init];
     
     // Do any additional setup after loading the view.
 }
@@ -72,7 +72,7 @@
                                   [_model setFirstName:text];
                               }
                             
-                              [self.registerView setValidTextfield:isValid withTag:tag];
+                              [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                                   
                               
                               break;
@@ -85,7 +85,7 @@
                                   
                               }
                               
-                              [self.registerView setValidTextfield:isValid withTag:tag];
+                             [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               
                               break;
                           }
@@ -96,19 +96,18 @@
                                   [_model setEmail:text];
                               }
                               
-                              [self.registerView setValidTextfield:isValid withTag:tag];
+                              [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               
                               break;
                           }
                           case 3:{
-                              
                               if ([text isEqualToString:_model.email] && isValid ) {
                                   
                                   [_model setVerifiedEmail:text];
-                              [self.registerView setValidTextfield:isValid withTag:tag];
+                              [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                                   
                               } else {
-                              [self.registerView setValidTextfield:NO withTag:tag];
+                              [self.registerView setValidTextfield:NO withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               }
                               
                               break;
@@ -119,7 +118,7 @@
                                   [_model setPassword:text];
                               }
                               
-                              [self.registerView setValidTextfield:isValid withTag:tag];
+                              [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               
                               break;
                           }
@@ -128,12 +127,22 @@
                               if ([text isEqualToString:_model.password ] && isValid) {
                                   
                                   [_model setVerifiedPassword:text];
-                                  [self.registerView setValidTextfield:isValid withTag:tag];
+                                  [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                                   
                               }else {
                               
-                              [self.registerView setValidTextfield:NO withTag:tag];
+                              [self.registerView setValidTextfield:NO withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               }
+                              break;
+                          }
+                        
+                          case 6: {
+                              
+                              if (isValid) {
+                                  [_model setBirthDateString:text];
+                              }
+                              
+                              [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               break;
                           }
                               
@@ -145,7 +154,11 @@
     
 }
 
-
+-(void)showAlert:(UIAlertController *)alertController {
+    
+    [self.navigationController presentViewController:alertController animated:YES completion:nil];
+    
+}
 #pragma mark -- memory management --
 
 - (void)didReceiveMemoryWarning {

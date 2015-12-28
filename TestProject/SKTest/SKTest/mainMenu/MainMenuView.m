@@ -45,9 +45,9 @@
 
 - (IBAction)countryTap:(id)sender {
     
-    [_delegate showAlert:[self showAlert]];
+  //  [_delegate showAlert:[self showAlert]];
     
- //    [_delegate pushToController:2];
+    [_delegate pushToController:2];
     
 }
 

@@ -11,6 +11,8 @@
 @interface SKBorderedButton ()
 {
     NSString *_buttonTitle;
+    UIView *_topBorder;
+    UIView *_bottomBorder;
 }
 
 @end
@@ -23,17 +25,32 @@
 
 -(void)addBorders {
     
-    UIView *topBorder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 1.5)];
+    _topBorder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 1.5)];
     
-    topBorder.backgroundColor = [UIColor whiteColor];
+    _topBorder.backgroundColor = [UIColor whiteColor];
     
-    UIView *bottomBorder = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-2,  self.frame.size.width, 1.5)];
-    bottomBorder.backgroundColor = [UIColor whiteColor];
+    _bottomBorder = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-2,  self.frame.size.width, 1.5)];
+    _bottomBorder.backgroundColor = [UIColor whiteColor];
     
     [self setAlpha:0.8];
-    [self addSubview:topBorder];
-    [self addSubview:bottomBorder];
+    [self addSubview:_topBorder];
+    [self addSubview:_bottomBorder];
+    
 }
+
+
+- (void) setEnabled:(BOOL)enabled {
+    
+    [super setEnabled:enabled];
+   
+    if (enabled) {
+        [self setTitleColor:[UIColor colorWithWhite:1 alpha:0.9] forState:UIControlStateNormal];
+    } else {
+        [self setTitleColor:[UIColor colorWithWhite:1 alpha:0.4] forState:UIControlStateDisabled];
+    }
+    
+}
+
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

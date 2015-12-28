@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CountryModel;
 @interface CountryViewController : UIViewController
 
+
+-(instancetype)initWithModel:(CountryModel *)model;
 @end

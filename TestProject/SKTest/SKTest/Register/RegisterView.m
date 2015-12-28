@@ -8,10 +8,13 @@
 
 #import "RegisterView.h"
 #import "SKCustomTextfield.h"
+#import "SKBorderedButton.h"
 
 @interface RegisterView () <UITextFieldDelegate>
 {
     SKCustomTextfield *_currentTextfield;
+    NSUInteger _validatedTextFields;
+    NSDate *_date;
 
     
 }
@@ -24,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet SKCustomTextfield *emailConfirmationTextfield;
 @property (weak, nonatomic) IBOutlet SKCustomTextfield *passwordTextfield;
 @property (weak, nonatomic) IBOutlet SKCustomTextfield *passwordConfirmationTextfield;
+@property (weak, nonatomic) IBOutlet SKCustomTextfield *birthDateTextfield;
+@property (weak, nonatomic) IBOutlet SKBorderedButton *nextButton;
 
 
 
@@ -31,11 +36,14 @@
 
 @implementation RegisterView
 
+#pragma mark -- Initialization --
 
 - (void)drawRect:(CGRect)rect {
     // Drawing code
 
     [self setTextFieldDelegates];
+    _validatedTextFields = 0;
+    [_nextButton setEnabled:NO];
    
     
 }
@@ -48,8 +56,45 @@
     self.emailConfirmationTextfield.delegate = self;
     self.passwordTextfield.delegate  = self;
     self.passwordConfirmationTextfield.delegate = self;
+    self.birthDateTextfield.delegate = self;
   
 }
+
+#pragma mark -- TextfieldDelegate --
+
+- (void)textFieldDidBeginEditing:(SKCustomTextfield *)textField
+{
+    
+    
+    [self resignResponderSelector];
+    
+    _currentTextfield = textField; // careful! this should be after selector
+    
+    if (textField.tag == 6) {
+        
+        [self initDatePicker];
+    }
+    
+    
+    [self srollToTopBy:textField.tag];
+    
+    
+}
+
+-(void)textFieldDidEndEditing:(SKCustomTextfield *)textField {
+    
+    if (textField.text.length > 0) {
+        
+        [_delegate textFieldDidEndEditingWithString:textField.text  andTag:textField.tag];
+        
+    }
+    
+    //[self resetScrollView];
+    
+}
+
+#pragma  mark -- Instance methods --
+
 
 -(void)resignResponderSelector {
     if (!_currentTextfield) { // for once calling
@@ -67,18 +112,32 @@
 }
 
 
-- (void)textFieldDidBeginEditing:(SKCustomTextfield *)textField
-{
-  
 
-    [self resignResponderSelector];
+
+-(void)initDatePicker{
     
-    _currentTextfield = textField; // careful! this should be after selector
+    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+    [datePicker setDate:[NSDate date]];
+    [datePicker setDatePickerMode:UIDatePickerModeDate];
+    [datePicker addTarget:self action:@selector(setBirthDate:) forControlEvents:UIControlEventValueChanged];
+    [_birthDateTextfield setInputView:datePicker];
+}
+
+-(void) setBirthDate:(id)sender
+{
+    UIDatePicker *picker = (UIDatePicker*)sender;
+    [_birthDateTextfield setText:[self formatDate:picker.date]];
+}
+
+
+- (NSString *)formatDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
-    [self srollToTopBy:textField.tag];
-    
-    
-    
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"MMM' 'dd','yyyy"];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return formattedDate;
 }
 
 -(void)srollToTopBy:(NSUInteger)tag {
@@ -90,26 +149,13 @@
     
     [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
--(void)textFieldDidEndEditing:(SKCustomTextfield *)textField {
-    
-    if (textField.text.length > 0) {
-        
-         [_delegate textFieldDidEndEditingWithString:textField.text  andTag:textField.tag];
-    
-    } else {
-        
- 
-    }
-    
-    [self resetScrollView];
-    
-   
-    
-}
 
--(void)setValidTextfield:(BOOL)isValidated withTag:(NSUInteger)tag {
+
+-(void)setValidTextfield:(BOOL)isValidated withTag:(NSUInteger)tag validatedFieldsNumber:(NSUInteger)fieldsNumber {
     
     CGFloat borderWidth = isValidated ? 0 : 1;
+    
+    [self setNextButtonStatus:fieldsNumber];
     
     switch (tag) {
             
@@ -147,12 +193,39 @@
             
             [_passwordConfirmationTextfield.layer setBorderWidth:borderWidth];
             
+            break;
+            
+        }
+        case 6: {
+            
+            [_birthDateTextfield.layer setBorderWidth:borderWidth];
+            
+            break;
         }
         default:
             break;
     }
 
 }
+
+-(void)setNextButtonStatus:(NSUInteger)fieldsNumber {
+    
+    fieldsNumber > 6 ? [_nextButton setEnabled:YES] :[_nextButton setEnabled:NO];
+}
+
+
+- (UIAlertController *)showAlertwithTitle:(NSString *)title message:(NSString *)message {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *dismiss = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) { }];
+    
+    [alertController addAction:dismiss];
+    
+    return alertController;
+    
+}
+
 
 
 - (IBAction)onBackButtonTap:(id)sender {
@@ -161,5 +234,10 @@
    
 }
 
+-(IBAction)onNextTap:(id)sender {
+    
+    [self resetScrollView];
+    [_delegate showAlert:[self showAlertwithTitle:@"Well done" message:@"let's do another thing"]];
+}
 
 @end

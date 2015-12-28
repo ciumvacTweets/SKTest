@@ -13,7 +13,9 @@
 
 
 -(void)popView;
+
 -(void)textFieldDidEndEditingWithString:(NSString *)text andTag:(NSUInteger)tag;
+-(void)showAlert:(UIAlertController *)alertController;
 
 @end
 
@@ -23,7 +25,7 @@
 
 @property (weak, nonatomic) id<RegisterViewDelegate> delegate;
 
--(void)setValidTextfield:(BOOL)isValidated withTag:(NSUInteger)tag;
+-(void)setValidTextfield:(BOOL)isValidated withTag:(NSUInteger)tag validatedFieldsNumber:(NSUInteger)fieldsNumber;
 
 @end
 

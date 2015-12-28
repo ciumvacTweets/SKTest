@@ -10,6 +10,8 @@
 #import "MainMenuView.h"
 #import "RegisterHandler.h"
 #import "RegisterViewController.h"
+#import "CountryViewController.h"
+#import "CountryModel.h"
 
 @interface MainMenuViewController () <MainMenuViewDelegate>
 
@@ -77,7 +79,8 @@
                 }
         
         case 2: {
-            
+                    [self.navigationController pushViewController:[self countryViewController]
+                                                         animated:YES];
                     break;
                 }
             
@@ -96,4 +99,11 @@
     
     return [[RegisterViewController alloc] initWithHandler:registerHandler];
 }
+
+
+-(CountryViewController *)countryViewController {
+    
+    return [[CountryViewController alloc] initWithModel:[[CountryModel alloc] init]];
+}
+
 @end

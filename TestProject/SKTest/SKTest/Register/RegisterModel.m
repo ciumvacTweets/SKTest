@@ -7,9 +7,10 @@
 //
 
 #import "RegisterModel.h"
+
 @interface RegisterModel ()
 {
-    NSInteger _settedFields;
+    NSUInteger _fieldsNumber;
 }
 @end
 
@@ -21,44 +22,75 @@
         self = [super init];
     }
     
-    _settedFields = 0;
+
     return self ;
 }
 
-
 -(void)setFirstName:(NSString *)firstName {
     
+    if (!_firstName) {
+        _fieldsNumber ++;
+    }
+    
     _firstName = firstName;
-    _settedFields++;
+    
+}
+-(void)setLastName:(NSString *)lastName{
+    
+    if (!_lastName) {
+        _fieldsNumber ++;
+    }
+    
+    _lastName  = lastName;
+    
 }
 
--(void)setLastName:(NSString *)lastName {
-    
-    _lastName = lastName;
-    _settedFields++;
+-(void)setEmail:(NSString *)email {
+    if (!_email) {
+        _fieldsNumber ++;
+    }
+    _email = email;
 }
 
 -(void)setVerifiedEmail:(NSString *)verifiedEmail {
     
+    if (!_verifiedEmail) {
+        _fieldsNumber ++;
+    }
     _verifiedEmail = verifiedEmail;
-    _settedFields++;
+}
+-(void)setPassword:(NSString *)password {
+    if (!_password) {
+        _fieldsNumber++;
+    }
+    _password = password;
+    
+    
 }
 
 -(void)setVerifiedPassword:(NSString *)verifiedPassword {
     
+    if (!_verifiedPassword) {
+        _fieldsNumber++;
+    }
     _verifiedPassword = verifiedPassword;
-    _settedFields++;
 }
 
--(void)setBirthDate:(NSDate *)birthDate {
+-(void)setBirthDateString:(NSString *)birthDateString{
+    if(!_birthDate) {
+        _fieldsNumber++;
+    }
     
-    _birthDate = birthDate;
-    _settedFields++;
-}
-
--(NSInteger)fieldsSetted {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
-    return _settedFields;
+    [dateFormatter setDateFormat:@"MMM' 'dd','yyyy"];
+    
+    _birthDate = [dateFormatter dateFromString:birthDateString];
+    NSLog(@"date:%@", _birthDate);
 }
 
+-(NSUInteger)validatedLabelsNumber {
+    
+    return _fieldsNumber;
+}
 @end

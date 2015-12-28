@@ -10,16 +10,17 @@
 
 @interface RegisterModel : NSObject
 
-@property (weak, nonatomic) NSString *firstName;
-@property (weak, nonatomic) NSString *lastName;
-@property (weak, nonatomic) NSString *email;
-@property (weak, nonatomic) NSString *verifiedEmail;
-@property (weak, nonatomic) NSString *password;
-@property (weak, nonatomic) NSString *verifiedPassword;
-@property (weak, nonatomic) NSDate *birthDate;
+@property (strong, nonatomic) NSString *firstName;
+@property (strong, nonatomic) NSString *lastName;
+@property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *verifiedEmail;
+@property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *verifiedPassword;
+@property (strong, nonatomic) NSDate *birthDate;
 
 
 -(instancetype)init;
+-(NSUInteger)validatedLabelsNumber;
+-(void)setBirthDateString:(NSString *)birthDateString;
 
--(NSInteger)fieldsSetted;
 @end
