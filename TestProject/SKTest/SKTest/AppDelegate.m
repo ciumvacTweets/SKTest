@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "MainMenuHandler.h"
 #import "MainMenuViewController.h"
 
 @interface AppDelegate ()
@@ -39,9 +38,8 @@
 
 
 - (UIViewController *)loginViewController {
-    MainMenuHandler *handler = [[MainMenuHandler alloc] init];
     
-    return [[MainMenuViewController alloc] initWithHandler:handler];
+    return [[MainMenuViewController alloc] init];
 }
 
 

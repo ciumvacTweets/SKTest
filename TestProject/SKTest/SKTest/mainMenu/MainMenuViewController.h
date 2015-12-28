@@ -16,6 +16,6 @@
 
 
 
--(instancetype)initWithHandler:(MainMenuHandler *)handler;
+-(instancetype)init;
 
 @end

@@ -10,4 +10,6 @@
 
 @interface SKCustomTextfield : UITextField
 
+@property BOOL isValid;
+
 @end

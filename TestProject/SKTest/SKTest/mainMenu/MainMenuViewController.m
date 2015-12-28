@@ -8,7 +8,6 @@
 
 #import "MainMenuViewController.h"
 #import "MainMenuView.h"
-#import "MainMenuHandler.h"
 #import "RegisterHandler.h"
 #import "RegisterViewController.h"
 
@@ -21,15 +20,9 @@
 
 @implementation MainMenuViewController
 
--(instancetype)initWithHandler:(MainMenuHandler *)handler {
+-(instancetype)init {
     
    self = [super initWithNibName:@"MainMenuView" bundle:nil];
-    
-    
-    if (self) {
-        
-        _handler = handler;
-    }
     
     return self;
     

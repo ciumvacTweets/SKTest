@@ -23,11 +23,11 @@
 
 -(void)addBorders {
     
-    UIView *topBorder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 2)];
+    UIView *topBorder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 1.5)];
     
     topBorder.backgroundColor = [UIColor whiteColor];
     
-    UIView *bottomBorder = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-2,  self.frame.size.width, 2)];
+    UIView *bottomBorder = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-2,  self.frame.size.width, 1.5)];
     bottomBorder.backgroundColor = [UIColor whiteColor];
     
     [self setAlpha:0.8];

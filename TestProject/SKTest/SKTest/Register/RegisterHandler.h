@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+@class SKCustomTextfield;
+
 
 @interface RegisterHandler : NSObject
+
+
+-(void)validateText:(NSString *)text forSenderTag:(NSUInteger)tag
+           response:(void (^)(BOOL))validated;
+
 
 @end

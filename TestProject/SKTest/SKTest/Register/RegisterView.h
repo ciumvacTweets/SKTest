@@ -13,6 +13,7 @@
 
 
 -(void)popView;
+-(void)textFieldDidEndEditingWithString:(NSString *)text andTag:(NSUInteger)tag;
 
 @end
 
@@ -20,6 +21,9 @@
 
 @interface RegisterView : UIView
 
-
 @property (weak, nonatomic) id<RegisterViewDelegate> delegate;
+
+-(void)setValidTextfield:(BOOL)isValidated withTag:(NSUInteger)tag;
+
 @end
+

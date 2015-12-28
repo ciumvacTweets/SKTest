@@ -24,7 +24,7 @@
                                             
                                         }else {
                                                                         
-                                                                        
+                                            [_delegate requestFailedWithError:[NSString stringWithFormat:@"%@", error.localizedDescription]];
                                         }
                                                         
                                         }];

@@ -22,6 +22,7 @@
     
     [self customizeView];
     
+    self.isValid = NO;
     
     
 }
@@ -31,10 +32,17 @@
     UIView *topBorder = [[UIView alloc] initWithFrame:CGRectMake(2, 0, self.frame.size.width-4, 1.5)];
     
     topBorder.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
+    
     [self addSubview:topBorder];
+    
     self.layer.cornerRadius = 2;
     
     self.backgroundColor = [UIColor whiteColor] ;
+    
+    self.font = [UIFont fontWithName:@"ALNile" size:15];
+    self.layer.borderColor = [[UIColor redColor] CGColor];
+    
+    
 }
 
 
