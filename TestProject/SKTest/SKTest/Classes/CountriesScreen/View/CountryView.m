@@ -113,6 +113,7 @@
     NSString *country = [sectionCountries objectAtIndex:indexPath.row];
     cell.textLabel.text = country;
     cell.backgroundColor = [UIColor clearColor];
+    cell.userInteractionEnabled = NO;
     
     return cell; // delete when implement
     
