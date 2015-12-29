@@ -34,7 +34,7 @@
     
     // Add both effects to your view
     [self addMotionEffect:group];
-    [self setAlpha:0.7];
+
 }
 
 @end

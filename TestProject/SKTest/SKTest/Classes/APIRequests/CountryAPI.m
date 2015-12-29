@@ -59,7 +59,7 @@
     
     if (isError) {
         
-        [_delegate requestFailedWithError:@"wrong dictionary format" ];
+        [_delegate requestFailedWithError:@"Wrong Data format" ];
     
     } else {
         

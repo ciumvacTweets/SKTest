@@ -11,7 +11,7 @@
 @protocol CountryAPIDelegate <NSObject>
 
 // returns received categories array
-- (void) receiveCountryList:(NSArray *)countyList;
+- (void) receiveCountryList:(NSArray *)countryList;
 
 // handle connection errors
 - (void) requestFailedWithError:(NSString *)errorString;

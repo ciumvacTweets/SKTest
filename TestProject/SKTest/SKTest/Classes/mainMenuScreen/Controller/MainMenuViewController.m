@@ -44,6 +44,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
@@ -103,7 +104,9 @@
 
 -(CountryViewController *)countryViewController {
     
-    return [[CountryViewController alloc] initWithModel:[[CountryModel alloc] init]];
+    CountryModel *model = [[CountryModel alloc] init];
+    
+    return [[CountryViewController alloc] initWithModel:model];
 }
 
 @end
