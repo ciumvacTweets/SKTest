@@ -24,9 +24,16 @@
         self = [super init];
     }
     
-    _validatedFieldsArray = [[NSMutableArray alloc] initWithObjects:@0, @0, @0, @0, @0, @0, @0, nil];
+    [self arrayInitialize];
     
     return self ;
+}
+
+
+-(void)arrayInitialize {
+    
+    _validatedFieldsArray = [[NSMutableArray alloc] initWithObjects:@0, @0, @0, @0, @0, @0, @0, nil];
+    
 }
 
 -(void)setFirstName:(NSString *)firstName validated:(BOOL)validated {

@@ -8,7 +8,7 @@
 
 #import "ContactsModel.h"
 #import <AddressBook/AddressBook.h>
-
+#import <UIKit/UIKit.h>
 @interface ContactsModel () {
     
     NSArray *_contactsArray;
@@ -26,79 +26,95 @@
         self = [super init];
     }
     
-    [self getPersonOutOfAddressBook];
-    
+   // [self getPersonOutOfAddressBook];
+    [self retrieveContacts];
     return self;
 }
 
-- (void)getPersonOutOfAddressBook
-{
+
+-(void)retrieveContacts {
     
-    CFErrorRef error = NULL;
+
+    ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, NULL);
     
-    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, &error);
-    
-    if (addressBook) {
-        NSLog(@"Succesful.");
+    if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusNotDetermined) {
+        ABAddressBookRequestAccessWithCompletion(addressBookRef, ^(bool granted, CFErrorRef error) {
+            
+        });
+    }
+    if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized) {
+        
+        CFErrorRef *error = NULL;
+        ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, error);
+        CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(addressBook);
+        CFIndex numberOfPeople = ABAddressBookGetPersonCount(addressBook);
         
         NSMutableArray *contactsArray = [[NSMutableArray alloc] init];
-        
-        NSArray *allContacts = (__bridge_transfer NSArray *)ABAddressBookCopyArrayOfAllPeople(addressBook);
-        
-       
-         for (int i = 0; i < [allContacts count]; i++)
-            {
+        for(int i = 0; i < numberOfPeople; i++) {
             
-            [contactsArray addObject:[self getPersonInfoforArray:allContacts objectAtIndex:i]];
+            ABRecordRef person = CFArrayGetValueAtIndex( allPeople, i );
             
+            NSString *firstName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonFirstNameProperty));
+            NSString *lastName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
+            NSLog(@"Name:%@ %@", firstName, lastName);
+            
+            NSMutableString *fullName = [[NSMutableString alloc] init];
+            if (firstName.length >0) {
+                [fullName appendString:firstName];
             }
+            if (lastName.length > 0) {
+                [fullName appendString:[NSString stringWithFormat:@" %@",lastName]];
+            }
+            ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
+
+            NSString *phoneNumber = (__bridge_transfer NSString *) ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+
+            NSLog(@"%@", phoneNumber);
+            
+         
+            BOOL hasImage = ABPersonHasImageData(person);
+            
+            NSMutableDictionary *contact = [[NSMutableDictionary alloc] initWithCapacity:5];
+            
+            [contact setValue:firstName forKey:@"firstName"];
+            [contact setValue:lastName forKey:@"lastName"];
+            [contact setValue:fullName forKey:@"fullName"];
+            [contact setValue:phoneNumber forKey:@"phone"];
+            [contact setValue:[NSNumber numberWithBool:hasImage] forKey:@"hasImage"];
         
-        NSLog(@"allContactsList: %@", contactsArray);
+            if (hasImage){
+                
+                NSData  *data = (__bridge_transfer NSData*) ABPersonCopyImageDataWithFormat(person, 0);
+                
+                UIImage *image = [UIImage imageWithData:data];
+                [contact setValue:image forKey:@"image"];
+            }
+            
+           
+            
+            [contactsArray addObject:contact];
+        }
         
         _contactsArray = contactsArray;
+    }
+    else {
+        // Send an alert telling user to change privacy setting in settings app
+    }
+
     
-        CFRelease(addressBook);
-        
-    } else { 
     
-        NSLog(@"Error reading Address Book");
-    } 
 }
 
 
-
--(NSDictionary *)getPersonInfoforArray:(NSArray *) allContacts objectAtIndex:(NSUInteger)i {
-    
-    NSMutableDictionary *person = [[NSMutableDictionary alloc] init];
-    
-    ABRecordRef contactPerson = (__bridge ABRecordRef)allContacts[i];
+-(NSString *)appendString:(NSString *)firstName andString:(NSString *)lastName {
+   
+    NSMutableString *fullName;
     
     
-    NSString *firstName = (__bridge_transfer NSString *)ABRecordCopyValue(contactPerson,
-                                                                          kABPersonFirstNameProperty);
-    NSString *lastName = (__bridge_transfer NSString *)ABRecordCopyValue(contactPerson, kABPersonLastNameProperty);
     
-    NSString *phoneNumber;
-    
-    ABMultiValueRef phones = ABRecordCopyValue(contactPerson, kABPersonPhoneProperty);
-    
-    CFStringRef phoneNumberRef = ABMultiValueCopyValueAtIndex(phones, 0);
-    
-    
-    phoneNumber = (__bridge NSString *)phoneNumberRef;
- 
-    NSString *fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
-    [person setObject:firstName forKey:@"firstName"];
-    [person setObject:lastName forKey:@"lastName"];
-    [person setObject:fullName forKey:@"fullName"];
-    [person setObject:phoneNumber forKey:@"phone"];
-    
-    CFRelease(phoneNumberRef);
-    CFRelease(phones);
-    
-    return person;
-
+    return fullName;
 }
+
 
 -(NSArray *)getContactsWichNameMatches:(NSString *)text {
     

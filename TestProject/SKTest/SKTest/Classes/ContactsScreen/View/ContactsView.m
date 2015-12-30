@@ -53,8 +53,8 @@
     
     self.contactsTableVIew.backgroundColor = [UIColor clearColor];
     self.contactsTableVIew.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.contactsTableVIew.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+ //   self.contactsTableVIew.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.contactsTableVIew.separatorColor = [UIColor clearColor];
     [self.contactsTableVIew registerNib:[UINib nibWithNibName:@"ContactsCell"
                                                        bundle:nil]
                  forCellReuseIdentifier:@"ContactsCell"];
