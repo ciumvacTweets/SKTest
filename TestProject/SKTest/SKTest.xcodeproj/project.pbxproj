@@ -34,6 +34,15 @@
 		8463D8D11C3140AB0079742C /* CountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463D8D01C3140AB0079742C /* CountryModel.m */; };
 		8463D8D41C3142620079742C /* CountryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463D8D31C3142620079742C /* CountryView.m */; };
 		8463D8D61C31427F0079742C /* CountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8463D8D51C31427F0079742C /* CountryView.xib */; };
+		8463D8DE1C32A12B0079742C /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463D8DD1C32A12B0079742C /* ContactsViewController.m */; };
+		8463D8E11C32A1920079742C /* ContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463D8E01C32A1920079742C /* ContactsModel.m */; };
+		8463D8E41C32A1CC0079742C /* ContactsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463D8E31C32A1CC0079742C /* ContactsView.m */; };
+		8463D8E61C32A30F0079742C /* ContactsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8463D8E51C32A30F0079742C /* ContactsView.xib */; };
+		8463D8E81C32BC9B0079742C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8463D8E71C32BC9B0079742C /* AddressBook.framework */; };
+		8463D8EA1C32D5C80079742C /* Check-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463D8E91C32D5C80079742C /* Check-128.png */; };
+		8463D8F21C330A550079742C /* ContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463D8F01C330A550079742C /* ContactsCell.m */; };
+		8463D8F31C330A550079742C /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8463D8F11C330A550079742C /* ContactsCell.xib */; };
+		8463D8F51C33114A0079742C /* Check-128unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463D8F41C33114A0079742C /* Check-128unchecked.png */; };
 		84E3A4741C2C978000ED97DF /* CountryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4731C2C978000ED97DF /* CountryAPI.m */; };
 		84E3A4751C2C978000ED97DF /* CountryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4731C2C978000ED97DF /* CountryAPI.m */; };
 		84E3A4761C2C978000ED97DF /* CountryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3A4731C2C978000ED97DF /* CountryAPI.m */; };
@@ -108,6 +117,19 @@
 		8463D8D21C3142620079742C /* CountryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryView.h; sourceTree = "<group>"; };
 		8463D8D31C3142620079742C /* CountryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryView.m; sourceTree = "<group>"; };
 		8463D8D51C31427F0079742C /* CountryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryView.xib; sourceTree = "<group>"; };
+		8463D8DC1C32A12B0079742C /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		8463D8DD1C32A12B0079742C /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		8463D8DF1C32A1920079742C /* ContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsModel.h; sourceTree = "<group>"; };
+		8463D8E01C32A1920079742C /* ContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsModel.m; sourceTree = "<group>"; };
+		8463D8E21C32A1CC0079742C /* ContactsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsView.h; sourceTree = "<group>"; };
+		8463D8E31C32A1CC0079742C /* ContactsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsView.m; sourceTree = "<group>"; };
+		8463D8E51C32A30F0079742C /* ContactsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsView.xib; sourceTree = "<group>"; };
+		8463D8E71C32BC9B0079742C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		8463D8E91C32D5C80079742C /* Check-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Check-128.png"; sourceTree = "<group>"; };
+		8463D8EF1C330A550079742C /* ContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsCell.h; path = ContactsCell/ContactsCell.h; sourceTree = "<group>"; };
+		8463D8F01C330A550079742C /* ContactsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsCell.m; path = ContactsCell/ContactsCell.m; sourceTree = "<group>"; };
+		8463D8F11C330A550079742C /* ContactsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactsCell.xib; path = ContactsCell/ContactsCell.xib; sourceTree = "<group>"; };
+		8463D8F41C33114A0079742C /* Check-128unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Check-128unchecked.png"; sourceTree = "<group>"; };
 		84E3A4721C2C978000ED97DF /* CountryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryAPI.h; sourceTree = "<group>"; };
 		84E3A4731C2C978000ED97DF /* CountryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryAPI.m; sourceTree = "<group>"; };
 		84E3A47B1C2EC31B00ED97DF /* SKBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBorderedButton.h; sourceTree = "<group>"; };
@@ -131,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8463D8E81C32BC9B0079742C /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +177,7 @@
 		8413F0401C2C008C000D44A2 = {
 			isa = PBXGroup;
 			children = (
+				8463D8E71C32BC9B0079742C /* AddressBook.framework */,
 				8413F04A1C2C008C000D44A2 /* Products */,
 				8413F07F1C2C0C88000D44A2 /* Resources */,
 				8413F04B1C2C008C000D44A2 /* SKTest */,
@@ -237,6 +261,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		8463D8ED1C3309F60079742C /* ContactCell */ = {
+			isa = PBXGroup;
+			children = (
+				8463D8EF1C330A550079742C /* ContactsCell.h */,
+				8463D8F01C330A550079742C /* ContactsCell.m */,
+				8463D8F11C330A550079742C /* ContactsCell.xib */,
+			);
+			name = ContactCell;
+			sourceTree = "<group>";
+		};
 		84E3A4711C2C96CE00ED97DF /* APIRequests */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +283,8 @@
 		84E3A4771C2EC1AF00ED97DF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8463D8F41C33114A0079742C /* Check-128unchecked.png */,
+				8463D8E91C32D5C80079742C /* Check-128.png */,
 				845D2BBE1C2C38D800D6CE79 /* Background.jpg */,
 				84E3A4AF1C2F1F6400ED97DF /* Background2.jpg */,
 				8413F08C1C2C11A6000D44A2 /* IconSpot.png */,
@@ -324,6 +360,8 @@
 		84E3A4841C2EE9C400ED97DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8463D8DF1C32A1920079742C /* ContactsModel.h */,
+				8463D8E01C32A1920079742C /* ContactsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +376,8 @@
 		84E3A4861C2EE9F500ED97DF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8463D8DC1C32A12B0079742C /* ContactsViewController.h */,
+				8463D8DD1C32A12B0079742C /* ContactsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +385,10 @@
 		84E3A4871C2EEA0500ED97DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8463D8ED1C3309F60079742C /* ContactCell */,
+				8463D8E21C32A1CC0079742C /* ContactsView.h */,
+				8463D8E31C32A1CC0079742C /* ContactsView.m */,
+				8463D8E51C32A30F0079742C /* ContactsView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -510,7 +554,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8413F0441C2C008C000D44A2 /* Build configuration list for PBXProject "sktest" */;
+			buildConfigurationList = 8413F0441C2C008C000D44A2 /* Build configuration list for PBXProject "SKTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -535,9 +579,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8463D8E61C32A30F0079742C /* ContactsView.xib in Resources */,
 				845D2BAC1C2C14CA00D6CE79 /* MainMenuView.xib in Resources */,
+				8463D8F31C330A550079742C /* ContactsCell.xib in Resources */,
+				8463D8EA1C32D5C80079742C /* Check-128.png in Resources */,
 				84E3A4B01C2F1F6400ED97DF /* Background2.jpg in Resources */,
 				84E3A4AC1C2F1CA400ED97DF /* RegisterView.xib in Resources */,
+				8463D8F51C33114A0079742C /* Check-128unchecked.png in Resources */,
 				8413F0901C2C11A6000D44A2 /* IconSpot.png in Resources */,
 				845D2BBF1C2C38D800D6CE79 /* Background.jpg in Resources */,
 				8413F0591C2C008C000D44A2 /* Assets.xcassets in Resources */,
@@ -580,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842B4D001C304E6B00AB497E /* RegisterModel.m in Sources */,
+				8463D8DE1C32A12B0079742C /* ContactsViewController.m in Sources */,
 				84E3A4901C2F07EE00ED97DF /* SKCustomTextfield.m in Sources */,
 				8463D8D11C3140AB0079742C /* CountryModel.m in Sources */,
 				8413F0511C2C008C000D44A2 /* AppDelegate.m in Sources */,
@@ -587,9 +636,12 @@
 				845D2BA91C2C14CA00D6CE79 /* MainMenuViewController.m in Sources */,
 				84E3A4A81C2F1C1400ED97DF /* RegisterView.m in Sources */,
 				8463D8D41C3142620079742C /* CountryView.m in Sources */,
+				8463D8F21C330A550079742C /* ContactsCell.m in Sources */,
 				84E3A4991C2F17B200ED97DF /* RegisterViewController.m in Sources */,
+				8463D8E11C32A1920079742C /* ContactsModel.m in Sources */,
 				8463D8CE1C3140890079742C /* CountryViewController.m in Sources */,
 				84E3A4A31C2F187100ED97DF /* RegisterHandler.m in Sources */,
+				8463D8E41C32A1CC0079742C /* ContactsView.m in Sources */,
 				84E3A4BB1C2F2AF200ED97DF /* ParallaxBackgroundView.m in Sources */,
 				845D2BB41C2C2C7F00D6CE79 /* MainMenuView.m in Sources */,
 				84E3A47D1C2EC31B00ED97DF /* SKBorderedButton.m in Sources */,
@@ -804,7 +856,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8413F0441C2C008C000D44A2 /* Build configuration list for PBXProject "sktest" */ = {
+		8413F0441C2C008C000D44A2 /* Build configuration list for PBXProject "SKTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8413F0741C2C008C000D44A2 /* Debug */,

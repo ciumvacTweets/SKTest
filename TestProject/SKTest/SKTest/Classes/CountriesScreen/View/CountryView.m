@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *countriesTableView;
 @property (strong, nonatomic) NSDictionary *countriesDictionary;
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
 
 
 @end
@@ -36,19 +37,26 @@
     
     [self.countriesTableView setBackgroundColor:[UIColor clearColor]];
     self.countriesTableView.tableFooterView  =[[UIView alloc] initWithFrame:CGRectZero];
-    
-   
- 
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:self.frame];
+
+    [self addSubview:self.activityIndicator];
+    [self.activityIndicator startAnimating];
     
  
 }
 
 -(void)receiveIndexedCountryList:(NSDictionary *)IndexedCountryList{
     
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        
+        [_activityIndicator stopAnimating];
+        
+    });
     
     _sectionTitles = [[IndexedCountryList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     _IndexedCountryList = IndexedCountryList;
+    
     [self dispatchLater:^{
         [self.countriesTableView reloadData];
     }];
@@ -59,15 +67,23 @@
 
 -(void)showError:(NSString *)errorString {
     
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        
+        [_activityIndicator stopAnimating];
+        
+    });
+
     [_delegate ShowAlert:[self showAlertwithTitle:@"Oops!" message:errorString]];
     
 }
 
 - (void)dispatchLater:(dispatch_block_t)block {
-    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC));
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC));
     dispatch_after(time, dispatch_get_main_queue(), block);
 }
+
+
 
 - (UIAlertController *)showAlertwithTitle:(NSString *)title message:(NSString *)message {
     

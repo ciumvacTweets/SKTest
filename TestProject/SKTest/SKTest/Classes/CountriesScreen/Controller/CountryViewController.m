@@ -65,7 +65,7 @@
 
 -(void)ShowAlert:(UIAlertController *)alert {
     
-    [self.navigationController presentViewController:alert animated:YES completion:nil];
+    [self presentViewController:alert animated:YES completion:^{ }];
 }
 
 #pragma mark -- Model Delegate --

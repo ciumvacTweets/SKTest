@@ -115,9 +115,9 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 
     [dateFormatter setDateFormat:@"MMM' 'dd','yyyy"];
-    NSDate *birthDate = [[NSDate alloc] init];
+ 
 
-    birthDate = [dateFormatter dateFromString:text];
+    NSDate *birthDate = [dateFormatter dateFromString:text];
     
     
     NSDate* now = [NSDate date];

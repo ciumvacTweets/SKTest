@@ -12,7 +12,7 @@
 
 
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
+//    // Drawing code
     UIInterpolatingMotionEffect *verticalMotionEffect =
     [[UIInterpolatingMotionEffect alloc]
      initWithKeyPath:@"center.y"

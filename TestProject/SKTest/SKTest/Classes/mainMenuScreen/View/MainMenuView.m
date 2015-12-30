@@ -53,9 +53,9 @@
 
 - (IBAction)contactsTap:(id)sender {
     
-     [_delegate showAlert:[self showAlert]];
+//     [_delegate showAlert:[self showAlert]];
     
-//     [_delegate pushToController:3];
+     [_delegate pushToController:3];
     
 }
 @end

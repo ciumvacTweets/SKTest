@@ -11,6 +11,8 @@
 @interface RegisterModel ()
 {
     NSUInteger _fieldsNumber;
+    
+    NSMutableArray *_validatedFieldsArray;
 }
 @end
 
@@ -22,64 +24,58 @@
         self = [super init];
     }
     
-
+    _validatedFieldsArray = [[NSMutableArray alloc] initWithObjects:@0, @0, @0, @0, @0, @0, @0, nil];
+    
     return self ;
 }
 
--(void)setFirstName:(NSString *)firstName {
+-(void)setFirstName:(NSString *)firstName validated:(BOOL)validated {
     
-    if (!_firstName) {
-        _fieldsNumber ++;
-    }
-    
+   validated ? [_validatedFieldsArray setObject:@1 atIndexedSubscript:0]:[_validatedFieldsArray setObject:@0 atIndexedSubscript:0];
+
     _firstName = firstName;
     
 }
--(void)setLastName:(NSString *)lastName{
+-(void)setLastName:(NSString *)lastName validated:(BOOL)validated{
     
-    if (!_lastName) {
-        _fieldsNumber ++;
-    }
+     validated ? [_validatedFieldsArray setObject:@1 atIndexedSubscript:1]:[_validatedFieldsArray setObject:@0 atIndexedSubscript:1];
     
     _lastName  = lastName;
     
 }
 
--(void)setEmail:(NSString *)email {
-    if (!_email) {
-        _fieldsNumber ++;
-    }
+-(void)setEmail:(NSString *)email validated:(BOOL)validated{
+    
+     validated ? [_validatedFieldsArray setObject:@1 atIndexedSubscript:2]:[_validatedFieldsArray setObject:@0 atIndexedSubscript:2];
+    
     _email = email;
 }
 
--(void)setVerifiedEmail:(NSString *)verifiedEmail {
+-(void)setVerifiedEmail:(NSString *)verifiedEmail validated:(BOOL)validated {
     
-    if (!_verifiedEmail) {
-        _fieldsNumber ++;
-    }
+     validated ? [_validatedFieldsArray setObject:@1 atIndexedSubscript:3]:[_validatedFieldsArray setObject:@0 atIndexedSubscript:3];
+    
     _verifiedEmail = verifiedEmail;
 }
--(void)setPassword:(NSString *)password {
-    if (!_password) {
-        _fieldsNumber++;
-    }
+-(void)setPassword:(NSString *)password validated:(BOOL)validated {
+   
+    validated ? [_validatedFieldsArray setObject:@1 atIndexedSubscript:4]:[_validatedFieldsArray setObject:@0 atIndexedSubscript:4];
+    
     _password = password;
     
     
 }
 
--(void)setVerifiedPassword:(NSString *)verifiedPassword {
+-(void)setVerifiedPassword:(NSString *)verifiedPassword validated:(BOOL)validated {
     
-    if (!_verifiedPassword) {
-        _fieldsNumber++;
-    }
+     validated ? [_validatedFieldsArray setObject:@1 atIndexedSubscript:5]:[_validatedFieldsArray setObject:@0 atIndexedSubscript:5];
+    
     _verifiedPassword = verifiedPassword;
 }
 
--(void)setBirthDateString:(NSString *)birthDateString{
-    if(!_birthDate) {
-        _fieldsNumber++;
-    }
+-(void)setBirthDateString:(NSString *)birthDateString validated:(BOOL)validated{
+    
+    validated ? [_validatedFieldsArray setObject:@1 atIndexedSubscript:6]:[_validatedFieldsArray setObject:@0 atIndexedSubscript:6];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
@@ -90,6 +86,13 @@
 }
 
 -(NSUInteger)validatedLabelsNumber {
+    _fieldsNumber = 0;
+    
+    for (NSNumber *number in _validatedFieldsArray ) {
+        _fieldsNumber += [number integerValue];
+    }
+    
+    NSLog(@"%lu", (unsigned long)_fieldsNumber);
     
     return _fieldsNumber;
 }

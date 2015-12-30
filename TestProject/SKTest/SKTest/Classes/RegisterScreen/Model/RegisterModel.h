@@ -21,6 +21,13 @@
 
 -(instancetype)init;
 -(NSUInteger)validatedLabelsNumber;
--(void)setBirthDateString:(NSString *)birthDateString;
+
+-(void)setFirstName:(NSString *)firstName validated:(BOOL)validated;
+-(void)setLastName:(NSString *)lastName validated:(BOOL)validated;
+-(void)setEmail:(NSString *)email validated:(BOOL)validated;
+-(void)setVerifiedEmail:(NSString *)verifiedEmail validated:(BOOL)validated;
+-(void)setPassword:(NSString *)password validated:(BOOL)validated;
+-(void)setVerifiedPassword:(NSString *)verifiedPassword validated:(BOOL)validated;
+-(void)setBirthDateString:(NSString *)birthDateString validated:(BOOL)validated;
 
 @end

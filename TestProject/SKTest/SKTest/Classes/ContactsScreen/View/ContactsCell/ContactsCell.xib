@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactsCell" rowHeight="80" id="KGk-i7-Jjw" customClass="ContactsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QuQ-Af-u1l">
+                        <rect key="frame" x="8" y="8" width="60" height="60"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47F-j2-EPm">
+                                <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpQ-yX-nnL">
+                                        <rect key="frame" x="6" y="16" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.58961688424011305" green="0.80570818760666985" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY7-PD-rNb">
+                        <rect key="frame" x="76" y="16" width="170" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zL-Yl-JVt">
+                        <rect key="frame" x="76" y="39" width="170" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh3-CO-79R">
+                        <rect key="frame" x="268" y="25" width="30" height="30"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="D6R-Ro-9rQ"/>
+                            <constraint firstAttribute="height" constant="30" id="SYe-DO-nHn"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="Check-128 unchecked.png"/>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="7zL-Yl-JVt" firstAttribute="top" secondItem="TY7-PD-rNb" secondAttribute="bottom" constant="2" id="48j-m2-D3t"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Zh3-CO-79R" secondAttribute="trailing" constant="14" id="ECh-lB-MZZ"/>
+                    <constraint firstItem="Zh3-CO-79R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="17" id="NrT-bo-U4G"/>
+                    <constraint firstItem="7zL-Yl-JVt" firstAttribute="leading" secondItem="QuQ-Af-u1l" secondAttribute="trailing" constant="8" id="UCo-LT-uy2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="NameLabel" destination="7zL-Yl-JVt" id="s8k-aS-Fia"/>
+                <outlet property="checkButton" destination="Zh3-CO-79R" id="WgN-gI-9YK"/>
+                <outlet property="contactImageBackground" destination="47F-j2-EPm" id="LZ9-7S-pZr"/>
+                <outlet property="contactImageLabel" destination="PpQ-yX-nnL" id="EkR-r0-tyo"/>
+                <outlet property="contactImageMask" destination="QuQ-Af-u1l" id="dCc-qC-enI"/>
+                <outlet property="phoneNumberLabel" destination="TY7-PD-rNb" id="gfG-uC-UiK"/>
+            </connections>
+            <point key="canvasLocation" x="310" y="293"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Check-128 unchecked.png" width="4000" height="2667"/>
+    </resources>
+</document>

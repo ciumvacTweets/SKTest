@@ -65,6 +65,9 @@
 - (void)textFieldDidBeginEditing:(SKCustomTextfield *)textField
 {
     
+    [textField addTarget:self
+                  action:@selector(textFieldDidChange:)
+        forControlEvents:UIControlEventEditingChanged];
     
     [self resignResponderSelector];
     
@@ -81,15 +84,16 @@
     
 }
 
+-(void)textFieldDidChange:(SKCustomTextfield *)textField {
+    
+    [_delegate textFieldDidEndEditingWithString:textField.text  andTag:textField.tag];
+    
+}
+
 -(void)textFieldDidEndEditing:(SKCustomTextfield *)textField {
     
-    if (textField.text.length > 0) {
-        
-        [_delegate textFieldDidEndEditingWithString:textField.text  andTag:textField.tag];
-        
-    }
-    
-    //[self resetScrollView];
+    [_delegate textFieldDidEndEditingWithString:textField.text  andTag:textField.tag];
+    [self resetScrollView];
     
 }
 
@@ -153,7 +157,7 @@
 
 -(void)setValidTextfield:(BOOL)isValidated withTag:(NSUInteger)tag validatedFieldsNumber:(NSUInteger)fieldsNumber {
     
-    CGFloat borderWidth = isValidated ? 0 : 1;
+    struct CGColor *borderColor = isValidated ? [[UIColor greenColor] CGColor] : [[UIColor redColor] CGColor];
     
     [self setNextButtonStatus:fieldsNumber];
     
@@ -161,45 +165,48 @@
             
         case 0:{
             
-            [_firstNameTextField.layer setBorderWidth:borderWidth];
+            [_firstNameTextField.layer setBorderColor:borderColor];
             
             break;
         }
         case 1:{
             
-            [_lastNameTextfield.layer setBorderWidth:borderWidth];
+            [_lastNameTextfield.layer setBorderColor:borderColor];
             
             break;
         }
         case 2:{
             
-            [_emailTextfield.layer setBorderWidth:borderWidth];
+            [_emailTextfield.layer setBorderColor:borderColor];
             
             break;
         }
         case 3:{
             
-            [_emailConfirmationTextfield.layer setBorderWidth:borderWidth];
+            [_emailConfirmationTextfield.layer setBorderColor:borderColor];
             
             break;
         }
         case 4: {
             
-            [_passwordTextfield.layer setBorderWidth:borderWidth];
+            [_passwordTextfield.layer setBorderColor:borderColor];
             
             break;
         }
         case 5: {
             
-            [_passwordConfirmationTextfield.layer setBorderWidth:borderWidth];
+            [_passwordConfirmationTextfield.layer setBorderColor:borderColor];
             
             break;
             
         }
         case 6: {
             
-            [_birthDateTextfield.layer setBorderWidth:borderWidth];
+            [_birthDateTextfield.layer setBorderColor:borderColor];
             
+            if (!isValidated) {
+               [_delegate showAlert:[self showAlertwithTitle:@"Sorry" message:@"you should have over 13 years for using this app"]];
+            }
             break;
         }
         default:
@@ -218,7 +225,7 @@
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *dismiss = [UIAlertAction actionWithTitle:@"Great!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) { }];
+    UIAlertAction *dismiss = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) { }];
     
     [alertController addAction:dismiss];
     

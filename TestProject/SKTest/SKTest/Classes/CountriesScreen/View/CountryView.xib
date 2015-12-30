@@ -73,16 +73,16 @@
                     <exclude reference="47I-g4-vgy"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="ADl-sI-nGN"/>
-                    <exclude reference="HdF-HF-WxC"/>
-                    <exclude reference="SwY-SJ-MX5"/>
-                    <exclude reference="WQz-Zi-WKk"/>
+                    <exclude reference="JVU-vA-M9d"/>
                     <exclude reference="5n1-eY-EMF"/>
                     <exclude reference="6kh-wv-NWI"/>
                     <exclude reference="WAc-sL-rTt"/>
                     <exclude reference="nuZ-ci-tET"/>
                     <exclude reference="pwD-AB-LrP"/>
-                    <exclude reference="JVU-vA-M9d"/>
+                    <exclude reference="ADl-sI-nGN"/>
+                    <exclude reference="HdF-HF-WxC"/>
+                    <exclude reference="SwY-SJ-MX5"/>
+                    <exclude reference="WQz-Zi-WKk"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -92,16 +92,16 @@
                     <include reference="47I-g4-vgy"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="ADl-sI-nGN"/>
-                    <include reference="HdF-HF-WxC"/>
-                    <include reference="SwY-SJ-MX5"/>
-                    <include reference="WQz-Zi-WKk"/>
+                    <include reference="JVU-vA-M9d"/>
                     <include reference="5n1-eY-EMF"/>
                     <include reference="6kh-wv-NWI"/>
                     <include reference="WAc-sL-rTt"/>
                     <include reference="nuZ-ci-tET"/>
                     <include reference="pwD-AB-LrP"/>
-                    <include reference="JVU-vA-M9d"/>
+                    <include reference="ADl-sI-nGN"/>
+                    <include reference="HdF-HF-WxC"/>
+                    <include reference="SwY-SJ-MX5"/>
+                    <include reference="WQz-Zi-WKk"/>
                 </mask>
             </variation>
             <connections>

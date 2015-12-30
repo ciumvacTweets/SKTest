@@ -66,11 +66,10 @@
                       switch (tag) {
                               
                           case 0:{
-                              
-                              if (isValid) {
+
                                   
-                                  [_model setFirstName:text];
-                              }
+                                  [_model setFirstName:text validated:isValid];
+                              
                             
                               [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                                   
@@ -79,11 +78,10 @@
                           }
                           case 1:{
                               
-                              if (isValid) {
                                   
-                                  [_model setLastName:text];
+                                  [_model setLastName:text validated:isValid];
                                   
-                              }
+                              
                               
                              [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               
@@ -91,32 +89,33 @@
                           }
                           case 2:{
                               
-                              if (isValid) {
-                                  
-                                  [_model setEmail:text];
-                              }
+                                  [_model setEmail:text validated:isValid];
+                              
                               
                               [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               
                               break;
                           }
                           case 3:{
-                              if ([text isEqualToString:_model.email] && isValid ) {
+                              
+                                [_model setVerifiedEmail:text validated:isValid];
+                              
+                              if ([text isEqualToString:_model.email]  ) {
                                   
-                                  [_model setVerifiedEmail:text];
+                              [_model setVerifiedEmail:text validated:isValid];
                               [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                                   
                               } else {
-                              [self.registerView setValidTextfield:NO withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
+                                  [_model setVerifiedEmail:text validated:NO];
+                                  [self.registerView setValidTextfield:NO withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               }
                               
                               break;
                           }
                           case 4: {
-                              if (isValid) {
                                   
-                                  [_model setPassword:text];
-                              }
+                                  [_model setPassword:text validated:isValid];
+                              
                               
                               [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               
@@ -124,13 +123,13 @@
                           }
                           case 5: {
                               
-                              if ([text isEqualToString:_model.password ] && isValid) {
+                              if ([text isEqualToString:_model.password ]) {
                                   
-                                  [_model setVerifiedPassword:text];
+                                  [_model setVerifiedPassword:text validated:isValid];
                                   [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                                   
                               }else {
-                              
+                              [_model setVerifiedPassword:text validated:NO];
                               [self.registerView setValidTextfield:NO withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               }
                               break;
@@ -138,9 +137,9 @@
                         
                           case 6: {
                               
-                              if (isValid) {
-                                  [_model setBirthDateString:text];
-                              }
+                              
+                                  [_model setBirthDateString:text validated:isValid];
+                              
                               
                               [self.registerView setValidTextfield:isValid withTag:tag validatedFieldsNumber:_model.validatedLabelsNumber];
                               break;

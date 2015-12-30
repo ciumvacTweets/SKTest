@@ -8,10 +8,15 @@
 
 #import "MainMenuViewController.h"
 #import "MainMenuView.h"
+
 #import "RegisterHandler.h"
 #import "RegisterViewController.h"
+
 #import "CountryViewController.h"
 #import "CountryModel.h"
+
+#import "ContactsModel.h"
+#import "ContactsViewController.h"
 
 @interface MainMenuViewController () <MainMenuViewDelegate>
 
@@ -86,13 +91,16 @@
                 }
             
         case 3: {
-            
+                    [self.navigationController pushViewController:[self contactsViewController]
+                                                         animated:YES];
                     break;
                 }
         default:
             break;
     }
 }
+
+
 
 -(RegisterViewController *)registerViewController {
     
@@ -109,4 +117,10 @@
     return [[CountryViewController alloc] initWithModel:model];
 }
 
+-(ContactsViewController *)contactsViewController {
+    
+    ContactsModel *model = [[ContactsModel alloc] init];
+    
+    return [[ContactsViewController alloc] initWithModel:model];
+}
 @end
