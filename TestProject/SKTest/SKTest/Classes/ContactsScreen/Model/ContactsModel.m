@@ -50,6 +50,8 @@
         CFIndex numberOfPeople = ABAddressBookGetPersonCount(addressBook);
         
         NSMutableArray *contactsArray = [[NSMutableArray alloc] init];
+        
+        
         for(int i = 0; i < numberOfPeople; i++) {
             
             ABRecordRef person = CFArrayGetValueAtIndex( allPeople, i );
@@ -90,17 +92,25 @@
                 [contact setValue:image forKey:@"image"];
             }
             
-           
-            
             [contactsArray addObject:contact];
+            
+            
+             CFRelease(phoneNumbers);
+             CFRelease(person);
         }
+        
+        CFRelease(allPeople);
+        CFRelease(addressBook);
+        
+        
         
         _contactsArray = contactsArray;
     }
     else {
         // Send an alert telling user to change privacy setting in settings app
     }
-
+    
+    CFRelease(addressBookRef);
     
     
 }
@@ -138,3 +148,4 @@
     return filtredContactsArray;
 }
 @end
+
