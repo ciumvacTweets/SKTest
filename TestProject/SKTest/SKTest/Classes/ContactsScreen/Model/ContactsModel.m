@@ -83,9 +83,7 @@
             [contact setValue:fullName forKey:@"fullName"];
             [contact setValue:phoneNumber forKey:@"phone"];
             [contact setValue:[NSNumber numberWithBool:hasImage] forKey:@"hasImage"];
-            
-            CFRelease((__bridge CFTypeRef)(firstName));
-            CFRelease((__bridge CFTypeRef)(lastName));
+          
             
             NSData  *data = (__bridge_transfer NSData*) ABPersonCopyImageDataWithFormat(person, 0);
 
@@ -98,11 +96,18 @@
             
             [contactsArray addObject:contact];
             
+            if (firstName) {
+                CFRelease((__bridge CFTypeRef)(firstName));
+            }
+            if (lastName) {
+                CFRelease((__bridge CFTypeRef)(lastName));
+            }
+            
              CFRelease(phoneNumbers);
 //            CFRelease(person);
             
         }
-        CFRelease(numberOfPeople);
+    
         CFRelease(allPeople);
         CFRelease(addressBook);
         
