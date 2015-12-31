@@ -64,15 +64,16 @@
     
     NSMutableDictionary *countriesWithIndexes = [[NSMutableDictionary alloc] init];
     NSString *country;
-    NSString *letter;
-    NSMutableArray *indexedCountriesArray = [[NSMutableArray alloc] init];
+ 
     
     for (country in _countriesNamesArray)
     {
-        letter = [country substringToIndex:1];
+        NSString *letter= [country substringToIndex:1];
+        
+        NSMutableArray *indexedCountriesArray = [[NSMutableArray alloc] init];
         
         if ([countriesWithIndexes objectForKey:letter]) {
-            
+            [indexedCountriesArray removeAllObjects];
             indexedCountriesArray = [countriesWithIndexes objectForKey:letter];
             [indexedCountriesArray addObject:country];
             [countriesWithIndexes setValue:indexedCountriesArray forKey:letter];
@@ -101,7 +102,7 @@
 
 -(void)requestFailedWithError:(NSString *)errorString {
     
-    NSLog(@"%@", errorString);
+    
     [_delegate didFailWithError:errorString];
 }
 @end

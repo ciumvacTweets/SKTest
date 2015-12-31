@@ -12,6 +12,7 @@
 @interface ContactsModel () {
     
     NSArray *_contactsArray;
+    BOOL _completed;
 }
 
 @end
@@ -27,101 +28,121 @@
     }
     
    // [self getPersonOutOfAddressBook];
-    [self retrieveContacts];
+    [self retrieveContactsWithCompletionBlock:^(id complete) {
+        
+         _completed= YES;
+    }];
     return self;
 }
 
 
--(void)retrieveContacts {
+    
+
+-(void)retrieveContactsWithCompletionBlock:(void (^)(id))completionBlock {
     
 
     ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, NULL);
     
     if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusNotDetermined) {
         ABAddressBookRequestAccessWithCompletion(addressBookRef, ^(bool granted, CFErrorRef error) {
+            if (granted)
+                completionBlock([self retrieveContactsforBook:addressBookRef]);
             
         });
     }
+    
     if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized) {
         
-        CFErrorRef *error = NULL;
-        ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, error);
-        CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(addressBook);
-        CFIndex numberOfPeople = ABAddressBookGetPersonCount(addressBook);
-        
-        NSMutableArray *contactsArray = [[NSMutableArray alloc] init];
-        
-        
-        for(int i = 0; i < numberOfPeople; i++) {
-            
-            ABRecordRef person = CFArrayGetValueAtIndex( allPeople, i );
-            
-            NSString *firstName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonFirstNameProperty));
-            NSString *lastName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
-            NSLog(@"Name:%@ %@", firstName, lastName);
-            
-            NSMutableString *fullName = [[NSMutableString alloc] init];
-            if (firstName.length >0) {
-                [fullName appendString:firstName];
-            }
-            if (lastName.length > 0) {
-                [fullName appendString:[NSString stringWithFormat:@" %@",lastName]];
-            }
-            ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
-
-            NSString *phoneNumber = (__bridge_transfer NSString *) ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
-
-            NSLog(@"%@", phoneNumber);
-            
-         
-            BOOL hasImage = ABPersonHasImageData(person);
-            
-            NSMutableDictionary *contact = [[NSMutableDictionary alloc] initWithCapacity:5];
-            
-            [contact setValue:firstName forKey:@"firstName"];
-            [contact setValue:lastName forKey:@"lastName"];
-            [contact setValue:fullName forKey:@"fullName"];
-            [contact setValue:phoneNumber forKey:@"phone"];
-            [contact setValue:[NSNumber numberWithBool:hasImage] forKey:@"hasImage"];
-          
-            
-            NSData  *data = (__bridge_transfer NSData*) ABPersonCopyImageDataWithFormat(person, 0);
-
-            
-            if (hasImage){
-                
-                UIImage *image = [UIImage imageWithData:data];
-                [contact setValue:image forKey:@"image"];
-            }
-            
-            [contactsArray addObject:contact];
-            
-            if (firstName) {
-                CFRelease((__bridge CFTypeRef)(firstName));
-            }
-            if (lastName) {
-                CFRelease((__bridge CFTypeRef)(lastName));
-            }
-            
-             CFRelease(phoneNumbers);
-//            CFRelease(person);
-            
-        }
-    
-        CFRelease(allPeople);
-        CFRelease(addressBook);
-        
-        
-        
-        _contactsArray = contactsArray;
+        completionBlock([self retrieveContactsforBook:addressBookRef]);
     }
+
+    
     else {
         // Send an alert telling user to change privacy setting in settings app
+        completionBlock(@"YES");
     }
     
     CFRelease(addressBookRef);
     
     
+}
+
+-(NSString *)retrieveContactsforBook:(ABAddressBookRef)adresBook {
+    
+    
+    CFErrorRef *error = NULL;
+    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, error);
+    CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(addressBook);
+    CFIndex numberOfPeople = ABAddressBookGetPersonCount(addressBook);
+    
+    NSMutableArray *contactsArray = [[NSMutableArray alloc] init];
+    
+    
+    for(int i = 0; i < numberOfPeople; i++) {
+        
+        ABRecordRef person = CFArrayGetValueAtIndex( allPeople, i );
+        
+        NSString *firstName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonFirstNameProperty));
+        NSString *lastName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
+        
+        
+        NSMutableString *fullName = [[NSMutableString alloc] init];
+        if (firstName.length >0) {
+            [fullName appendString:firstName];
+        }
+        if (lastName.length > 0) {
+            [fullName appendString:[NSString stringWithFormat:@" %@",lastName]];
+        }
+        ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
+        
+        NSString *phoneNumber = (__bridge_transfer NSString *) ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+        
+        
+        
+        BOOL hasImage = ABPersonHasImageData(person);
+        
+        NSMutableDictionary *contact = [[NSMutableDictionary alloc] initWithCapacity:5];
+        
+        [contact setValue:firstName forKey:@"firstName"];
+        [contact setValue:lastName forKey:@"lastName"];
+        [contact setValue:fullName forKey:@"fullName"];
+        [contact setValue:phoneNumber forKey:@"phone"];
+        [contact setValue:[NSNumber numberWithBool:hasImage] forKey:@"hasImage"];
+        
+        
+        NSData  *data = (__bridge_transfer NSData*) ABPersonCopyImageDataWithFormat(person, 0);
+        
+        
+        if (hasImage){
+            
+            UIImage *image = [UIImage imageWithData:data];
+            [contact setValue:image forKey:@"image"];
+        }
+        
+        [contactsArray addObject:contact];
+        
+        if (firstName) {
+            CFRelease((__bridge CFTypeRef)(firstName));
+        }
+        if (lastName) {
+            CFRelease((__bridge CFTypeRef)(lastName));
+        }
+        
+        CFRelease(phoneNumbers);
+        
+        
+    }
+    
+    CFRelease(allPeople);
+    CFRelease(addressBook);
+    
+    
+    
+    _contactsArray = contactsArray;
+    
+    
+   return @"YES";
+
 }
 
 
@@ -136,25 +157,30 @@
 
 
 -(NSArray *)getContactsWichNameMatches:(NSString *)text {
-    
-    
-    if (text.length == 0) {
-        return _contactsArray;
-        
-    }
-    
-    NSMutableArray *filtredContactsArray = [[NSMutableArray alloc] init];
-    NSDictionary *person = [[NSDictionary alloc] init];
-    for (person in _contactsArray ) {
 
-        if ([[person valueForKey:@"fullName"] rangeOfString:text options:NSCaseInsensitiveSearch].location != NSNotFound) {
-        
-            [filtredContactsArray addObject:person];
-        
-        }
-    }
     
-    return filtredContactsArray;
+  
+        NSMutableArray *filtredContactsArray = [[NSMutableArray alloc] init];
+        if (text.length == 0) {
+            
+            return _contactsArray;
+            
+        }
+        
+        NSDictionary *person = [[NSDictionary alloc] init];
+        for (person in _contactsArray ) {
+            
+            if ([[person valueForKey:@"fullName"] rangeOfString:text options:NSCaseInsensitiveSearch].location != NSNotFound) {
+                
+                [filtredContactsArray addObject:person];
+                
+            }}
+    
+    
+    
+    
+        return filtredContactsArray;
+   
 }
 @end
 

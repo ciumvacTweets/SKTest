@@ -56,6 +56,7 @@
     
     _sectionTitles = [[IndexedCountryList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     _IndexedCountryList = IndexedCountryList;
+
     
     [self dispatchLater:^{
         [self.countriesTableView reloadData];

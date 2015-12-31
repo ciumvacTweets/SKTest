@@ -89,7 +89,7 @@
     [dateFormatter setDateFormat:@"MMM' 'dd','yyyy"];
     
     _birthDate = [dateFormatter dateFromString:birthDateString];
-    NSLog(@"date:%@", _birthDate);
+   
 }
 
 -(NSUInteger)validatedLabelsNumber {
@@ -98,8 +98,6 @@
     for (NSNumber *number in _validatedFieldsArray ) {
         _fieldsNumber += [number integerValue];
     }
-    
-    NSLog(@"%lu", (unsigned long)_fieldsNumber);
     
     return _fieldsNumber;
 }

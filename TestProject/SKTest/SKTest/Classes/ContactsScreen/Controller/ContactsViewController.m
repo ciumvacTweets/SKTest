@@ -35,13 +35,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.contactsView loadContacts:[_model getContactsWichNameMatches:nil]];
+    
     
     self.contactsView.delegate = self;
     
     // Do any additional setup after loading the view.
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.contactsView loadContacts:[_model getContactsWichNameMatches:nil]];
+}
 # pragma mark -- view delegate --
 
 -(void)popView {

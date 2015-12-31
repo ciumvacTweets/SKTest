@@ -149,7 +149,7 @@
                                 <constraint firstAttribute="width" constant="240" id="k4s-l2-g6X"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="Zyc-ar-i2q"/>
@@ -171,7 +171,7 @@
                                 <constraint firstAttribute="width" constant="240" id="vdn-Il-JhH"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="OVb-cz-QLy"/>
