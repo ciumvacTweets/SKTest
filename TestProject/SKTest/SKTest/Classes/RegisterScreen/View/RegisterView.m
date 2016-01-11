@@ -9,6 +9,7 @@
 #import "RegisterView.h"
 #import "SKCustomTextfield.h"
 #import "SKBorderedButton.h"
+#import "ParallaxBackgroundView.h"
 
 @interface RegisterView () <UITextFieldDelegate>
 {
@@ -30,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet SKCustomTextfield *birthDateTextfield;
 @property (weak, nonatomic) IBOutlet SKBorderedButton *nextButton;
 
+@property (weak, nonatomic) IBOutlet ParallaxBackgroundView *backgroundImageView;
 
 
 @end
@@ -43,6 +45,7 @@
 
     [self setTextFieldDelegates];
     _validatedTextFields = 0;
+    [_backgroundImageView addMotion];
     [_nextButton setEnabled:NO];
    
     

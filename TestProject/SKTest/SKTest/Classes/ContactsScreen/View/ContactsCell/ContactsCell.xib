@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -23,7 +23,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpQ-yX-nnL">
                                         <rect key="frame" x="6" y="16" width="42" height="21"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="GuY-VP-j7c"/>
                                             <constraint firstAttribute="height" constant="21" id="qYK-eB-Gku"/>
@@ -33,7 +32,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.58823529411764708" green="0.80392156862745101" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="IBh-8h-c5H"/>
@@ -43,7 +41,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="47F-j2-EPm" firstAttribute="top" secondItem="QuQ-Af-u1l" secondAttribute="top" constant="3" id="6dv-BD-uGz"/>
@@ -54,7 +51,6 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY7-PD-rNb">
                         <rect key="frame" x="76" y="16" width="170" height="21"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="fCG-We-Jzb"/>
                         </constraints>
@@ -64,7 +60,6 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zL-Yl-JVt">
                         <rect key="frame" x="76" y="39" width="170" height="21"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="fmJ-W3-xcd"/>
                         </constraints>
@@ -74,15 +69,13 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh3-CO-79R">
                         <rect key="frame" x="268" y="25" width="30" height="30"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="1qz-Yo-hFa"/>
                             <constraint firstAttribute="height" constant="30" id="yj6-R5-fGR"/>
                         </constraints>
-                        <state key="normal" backgroundImage="Check-128 unchecked.png"/>
+                        <state key="normal" backgroundImage="Check-128unchecked.png"/>
                     </button>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="7zL-Yl-JVt" firstAttribute="leading" secondItem="QuQ-Af-u1l" secondAttribute="trailing" constant="8" id="395-pU-zAy"/>
                     <constraint firstItem="7zL-Yl-JVt" firstAttribute="top" secondItem="TY7-PD-rNb" secondAttribute="bottom" constant="2" id="8eX-wl-uxd"/>
@@ -96,7 +89,6 @@
                     <constraint firstItem="QuQ-Af-u1l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="vmT-GB-zm1"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="NameLabel" destination="7zL-Yl-JVt" id="s8k-aS-Fia"/>
                 <outlet property="checkButton" destination="Zh3-CO-79R" id="WgN-gI-9YK"/>
@@ -109,6 +101,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Check-128 unchecked.png" width="4000" height="2667"/>
+        <image name="Check-128unchecked.png" width="128" height="128"/>
     </resources>
 </document>

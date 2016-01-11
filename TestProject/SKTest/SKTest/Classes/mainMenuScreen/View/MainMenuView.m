@@ -58,4 +58,9 @@
      [_delegate pushToController:3];
     
 }
+
+- (IBAction)HomeTap:(id)sender {
+    
+    [_delegate pushToController:0];
+}
 @end

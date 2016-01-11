@@ -30,6 +30,14 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.checkButton setBackgroundImage:[UIImage imageNamed:@"Check-128unchecked"] forState:UIControlStateNormal];
     [self.contactImageBackground setBackgroundColor:[UIColor colorWithRed:88/255.f green:169/255.f blue:175/255.f alpha:0.7]];
+    [self.contactImageBackground setContentMode:UIViewContentModeScaleToFill];
+    self.contactImageBackground.autoresizingMask =
+    ( UIViewAutoresizingFlexibleBottomMargin
+     | UIViewAutoresizingFlexibleHeight
+     | UIViewAutoresizingFlexibleLeftMargin
+     | UIViewAutoresizingFlexibleRightMargin
+     | UIViewAutoresizingFlexibleTopMargin
+     | UIViewAutoresizingFlexibleWidth );
     
 }
 
@@ -43,10 +51,16 @@
     
     [self setupSubviews];
     self.NameLabel.text = [dataDictionary objectForKey:@"fullName"];
+    NSString *firstLetter;
+    NSString *secondLetter;
     
+    if ([[dataDictionary objectForKey:@"firstName"] length] > 0){
+     firstLetter = [[dataDictionary objectForKey:@"firstName"] substringToIndex:1];
+    }
     
-    NSString *firstLetter = [[dataDictionary objectForKey:@"firstName"] substringToIndex:1];
-    NSString *secondLetter = [[dataDictionary objectForKey:@"lastName"] substringToIndex:1];
+    if ([[dataDictionary objectForKey:@"firstName"] length] > 0){
+     secondLetter = [[dataDictionary objectForKey:@"lastName"] substringToIndex:1];
+    }
     NSMutableString *initials = [[NSMutableString alloc] init];
     
     if (firstLetter) {
@@ -62,6 +76,7 @@
         UIImage *image = [dataDictionary objectForKey:@"image"];
         
         [self.contactImageBackground setBackgroundColor:[UIColor colorWithPatternImage:image]];
+    
         
     } else {
         

@@ -76,7 +76,7 @@
     
         
         
-        NSString *nameFormat = @"^(?=.{3,})[a-zA-Z]+$"; //regex for 3+ Alphabetical characters
+        NSString *nameFormat = @"^(?=.{3,})[A-Za-zА-Яа-я]+$"; //regex for 3+ Alphabetical characters
         
         NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameFormat];
         

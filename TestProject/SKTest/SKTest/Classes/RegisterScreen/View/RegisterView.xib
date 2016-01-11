@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
@@ -16,14 +16,9 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Jo5-WJ-7ec" customClass="ParallaxBackgroundView">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <animations/>
-                    <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
-                    </variation>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orq-Sg-Hxw">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="384" id="JEz-IP-Nyr"/>
                         <constraint firstAttribute="height" constant="21" id="lPH-xF-6Ag"/>
@@ -46,7 +41,6 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J12-dd-6xD">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Flb-3F-ceW"/>
                         <constraint firstAttribute="width" constant="40" id="veJ-cW-sYM"/>
@@ -76,7 +70,6 @@
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please fill the form bellow.              Note that your password should contain 8 characters and at least 1 letter and 1 digit" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyg-sb-28W">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="90" id="dyn-0U-dPD"/>
                                 <constraint firstAttribute="width" constant="240" id="lxe-hw-WPC"/>
@@ -99,7 +92,6 @@
                         </textView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJI-Ki-mPH" customClass="SKCustomTextfield">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="W0g-4Z-PN3"/>
                                 <constraint firstAttribute="width" constant="240" id="cII-X7-5il"/>
@@ -121,7 +113,6 @@
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RPX-Ig-vST" customClass="SKCustomTextfield">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="240" id="6MO-2a-klH"/>
                                 <constraint firstAttribute="height" constant="35" id="dG5-bD-vei"/>
@@ -143,7 +134,6 @@
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hKR-d7-Kjt" customClass="SKCustomTextfield">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="Zyc-ar-i2q"/>
                                 <constraint firstAttribute="width" constant="240" id="k4s-l2-g6X"/>
@@ -165,7 +155,6 @@
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email confirmation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-w0-VBp" customClass="SKCustomTextfield">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="OVb-cz-QLy"/>
                                 <constraint firstAttribute="width" constant="240" id="vdn-Il-JhH"/>
@@ -187,7 +176,6 @@
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krF-ny-1lS" customClass="SKCustomTextfield">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="vKJ-4b-IBh"/>
                                 <constraint firstAttribute="width" constant="240" id="z9N-PU-y2E"/>
@@ -209,7 +197,6 @@
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password confirmation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pQZ-xy-J9Q" customClass="SKCustomTextfield">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="Dks-e1-Ovy"/>
                                 <constraint firstAttribute="width" constant="240" id="lMN-1F-FCb"/>
@@ -231,7 +218,6 @@
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n5F-dD-2nx" customClass="SKCustomTextfield">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="CpZ-2n-IKy"/>
                                 <constraint firstAttribute="width" constant="240" id="fyb-Pv-nr3"/>
@@ -253,7 +239,6 @@
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvE-1q-fFy" customClass="SKBorderedButton">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="8db-ZA-FYQ"/>
                                 <constraint firstAttribute="width" constant="100" id="Rtk-AG-WUX"/>
@@ -279,7 +264,6 @@
                             </connections>
                         </button>
                     </subviews>
-                    <animations/>
                     <constraints>
                         <constraint firstItem="TvE-1q-fFy" firstAttribute="centerX" secondItem="kGB-li-xJQ" secondAttribute="centerX" id="0PM-8v-hnL"/>
                         <constraint firstItem="n5F-dD-2nx" firstAttribute="top" secondItem="pQZ-xy-J9Q" secondAttribute="bottom" constant="13" id="2YC-xM-b4A"/>
@@ -372,18 +356,21 @@
                     </variation>
                 </scrollView>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="orq-Sg-Hxw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="23" id="6dR-rA-bP3"/>
                 <constraint firstItem="kGB-li-xJQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8K4-aV-C7f"/>
                 <constraint firstItem="J12-dd-6xD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="CRN-ub-iVp"/>
+                <constraint firstAttribute="bottom" secondItem="Jo5-WJ-7ec" secondAttribute="bottom" constant="-15" id="ClY-fb-P0L"/>
+                <constraint firstAttribute="trailing" secondItem="Jo5-WJ-7ec" secondAttribute="trailing" constant="-15" id="DiY-VC-Edr"/>
                 <constraint firstItem="orq-Sg-Hxw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FIg-xo-iZ6"/>
+                <constraint firstItem="Jo5-WJ-7ec" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-15" id="GiW-CF-n2q"/>
                 <constraint firstItem="kGB-li-xJQ" firstAttribute="top" secondItem="orq-Sg-Hxw" secondAttribute="bottom" constant="15" id="Gqr-UO-qIN"/>
                 <constraint firstAttribute="trailing" secondItem="kGB-li-xJQ" secondAttribute="trailing" id="Hp0-cZ-fBf"/>
                 <constraint firstAttribute="bottom" secondItem="kGB-li-xJQ" secondAttribute="bottom" id="Uih-SJ-bGZ"/>
                 <constraint firstItem="kGB-li-xJQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pYD-kK-qPB"/>
                 <constraint firstItem="J12-dd-6xD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="rmn-4c-ERO"/>
+                <constraint firstItem="Jo5-WJ-7ec" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-15" id="tA4-jr-arp"/>
                 <constraint firstAttribute="bottom" secondItem="kGB-li-xJQ" secondAttribute="bottom" id="vdR-ki-2Yu"/>
                 <constraint firstAttribute="trailing" secondItem="kGB-li-xJQ" secondAttribute="trailing" id="yPq-c5-gYZ"/>
             </constraints>
@@ -395,10 +382,12 @@
                     <exclude reference="kGB-li-xJQ"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="ClY-fb-P0L"/>
+                    <exclude reference="DiY-VC-Edr"/>
+                    <exclude reference="GiW-CF-n2q"/>
+                    <exclude reference="tA4-jr-arp"/>
                     <exclude reference="CRN-ub-iVp"/>
                     <exclude reference="rmn-4c-ERO"/>
-                    <exclude reference="6dR-rA-bP3"/>
-                    <exclude reference="FIg-xo-iZ6"/>
                     <exclude reference="8K4-aV-C7f"/>
                     <exclude reference="Gqr-UO-qIN"/>
                     <exclude reference="Hp0-cZ-fBf"/>
@@ -406,6 +395,8 @@
                     <exclude reference="pYD-kK-qPB"/>
                     <exclude reference="vdR-ki-2Yu"/>
                     <exclude reference="yPq-c5-gYZ"/>
+                    <exclude reference="6dR-rA-bP3"/>
+                    <exclude reference="FIg-xo-iZ6"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -416,10 +407,12 @@
                     <include reference="kGB-li-xJQ"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="ClY-fb-P0L"/>
+                    <include reference="DiY-VC-Edr"/>
+                    <include reference="GiW-CF-n2q"/>
+                    <include reference="tA4-jr-arp"/>
                     <include reference="CRN-ub-iVp"/>
                     <include reference="rmn-4c-ERO"/>
-                    <include reference="6dR-rA-bP3"/>
-                    <include reference="FIg-xo-iZ6"/>
                     <include reference="8K4-aV-C7f"/>
                     <include reference="Gqr-UO-qIN"/>
                     <include reference="Hp0-cZ-fBf"/>
@@ -427,9 +420,12 @@
                     <include reference="pYD-kK-qPB"/>
                     <include reference="vdR-ki-2Yu"/>
                     <include reference="yPq-c5-gYZ"/>
+                    <include reference="6dR-rA-bP3"/>
+                    <include reference="FIg-xo-iZ6"/>
                 </mask>
             </variation>
             <connections>
+                <outlet property="backgroundImageView" destination="Jo5-WJ-7ec" id="Wio-jZ-lGV"/>
                 <outlet property="birthDateTextfield" destination="n5F-dD-2nx" id="1bc-3X-gO8"/>
                 <outlet property="emailConfirmationTextfield" destination="Xmf-w0-VBp" id="sNq-1E-36P"/>
                 <outlet property="emailTextfield" destination="hKR-d7-Kjt" id="bZA-I8-Ev2"/>

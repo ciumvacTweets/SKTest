@@ -12,6 +12,7 @@
 
 @interface ParallaxBackgroundView : UIImageView
 
+-(void)addMotion;
 
 
 @end
