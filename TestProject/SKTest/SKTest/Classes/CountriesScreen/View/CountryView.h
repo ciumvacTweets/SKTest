@@ -18,6 +18,7 @@
 
 -(void)receiveIndexedCountryList:(NSDictionary *)IndexedCountryList;
 -(void)showError:(NSString *)errorString;
+-(void)viewSetup;
 
 @property (weak, nonatomic) id<CountryViewDelegate>delegate;
 

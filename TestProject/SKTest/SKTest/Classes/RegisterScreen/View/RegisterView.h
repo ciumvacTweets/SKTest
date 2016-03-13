@@ -26,6 +26,6 @@
 @property (weak, nonatomic) id<RegisterViewDelegate> delegate;
 
 -(void)setValidTextfield:(BOOL)isValidated withTag:(NSUInteger)tag validatedFieldsNumber:(NSUInteger)fieldsNumber;
-
+-(void)initialSetup;
 @end
 

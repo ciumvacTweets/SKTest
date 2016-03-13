@@ -26,15 +26,9 @@
 
 @implementation CountryView
 
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-    [self viewSetup];
-    self.countriesTableView.dataSource = self;
-
-}
 
 -(void)viewSetup {
-    
+    self.countriesTableView.dataSource = self;
     [self.countriesTableView setBackgroundColor:[UIColor clearColor]];
     self.countriesTableView.tableFooterView  =[[UIView alloc] initWithFrame:CGRectZero];
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:self.frame];

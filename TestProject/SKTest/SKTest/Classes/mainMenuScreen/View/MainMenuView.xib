@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuViewController">
@@ -98,43 +98,15 @@
                         <action selector="registerTap:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="7Xr-b3-Pzz"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNV-Di-zh8" customClass="SKBorderedButton">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="102" id="Gug-XG-ZAO"/>
-                        <constraint firstAttribute="height" constant="30" id="tvb-68-ynl"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                    <state key="normal" title="Home">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="Gug-XG-ZAO"/>
-                            <exclude reference="tvb-68-ynl"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular">
-                        <mask key="constraints">
-                            <include reference="Gug-XG-ZAO"/>
-                            <include reference="tvb-68-ynl"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <action selector="HomeTap:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="dz1-Nx-wns"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="aNV-Di-zh8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0QW-im-ehL"/>
                 <constraint firstItem="EUL-6e-Siq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HYt-LF-SXw"/>
                 <constraint firstItem="EUL-6e-Siq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Qm6-0w-hH0"/>
                 <constraint firstItem="Dmr-Mb-pNJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b00-oQ-EPk"/>
                 <constraint firstItem="Zer-r0-ySd" firstAttribute="top" secondItem="EUL-6e-Siq" secondAttribute="bottom" constant="49" id="djF-7L-f0T"/>
                 <constraint firstItem="Zer-r0-ySd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kJN-nf-3dI"/>
                 <constraint firstItem="Dmr-Mb-pNJ" firstAttribute="top" secondItem="Zer-r0-ySd" secondAttribute="bottom" constant="38" id="ljr-Uw-IjB"/>
-                <constraint firstItem="EUL-6e-Siq" firstAttribute="top" secondItem="aNV-Di-zh8" secondAttribute="bottom" constant="49" id="msY-EO-wCd"/>
             </constraints>
             <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
             <variation key="default">
@@ -143,17 +115,14 @@
                     <exclude reference="Zer-r0-ySd"/>
                     <exclude reference="Dmr-Mb-pNJ"/>
                     <exclude reference="EUL-6e-Siq"/>
-                    <exclude reference="aNV-Di-zh8"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="b00-oQ-EPk"/>
                     <exclude reference="ljr-Uw-IjB"/>
                     <exclude reference="HYt-LF-SXw"/>
                     <exclude reference="Qm6-0w-hH0"/>
-                    <exclude reference="msY-EO-wCd"/>
                     <exclude reference="djF-7L-f0T"/>
                     <exclude reference="kJN-nf-3dI"/>
-                    <exclude reference="0QW-im-ehL"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -162,17 +131,14 @@
                     <include reference="Zer-r0-ySd"/>
                     <include reference="Dmr-Mb-pNJ"/>
                     <include reference="EUL-6e-Siq"/>
-                    <include reference="aNV-Di-zh8"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="b00-oQ-EPk"/>
                     <include reference="ljr-Uw-IjB"/>
                     <include reference="HYt-LF-SXw"/>
                     <include reference="Qm6-0w-hH0"/>
-                    <include reference="msY-EO-wCd"/>
                     <include reference="djF-7L-f0T"/>
                     <include reference="kJN-nf-3dI"/>
-                    <include reference="0QW-im-ehL"/>
                 </mask>
             </variation>
         </view>

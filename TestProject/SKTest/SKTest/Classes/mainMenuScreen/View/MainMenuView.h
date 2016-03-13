@@ -26,5 +26,4 @@
 - (IBAction)registerTap:(id)sender;
 - (IBAction)countryTap:(id)sender;
 - (IBAction)contactsTap:(id)sender;
-- (IBAction)HomeTap:(id)sender;
 @end

@@ -18,8 +18,6 @@
 #import "ContactsModel.h"
 #import "ContactsViewController.h"
 
-#import "HomeScreenViewController.h"
-
 @interface MainMenuViewController () <MainMenuViewDelegate>
 
 @property (readonly) MainMenuView *mainMenuView;
@@ -76,11 +74,6 @@
 -(void)pushToController:(NSInteger )tag {
     
     switch (tag) {
-        case 0: {
-            
-                    [self.navigationController pushViewController:[self homeViewController] animated:YES];
-                    break;
-                }
             
         case 1: {
             
@@ -129,9 +122,5 @@
     return [[ContactsViewController alloc] initWithModel:model];
 }
 
--(HomeScreenViewController *)homeViewController {
-    
-    return [[HomeScreenViewController alloc] init];
-}
 
 @end

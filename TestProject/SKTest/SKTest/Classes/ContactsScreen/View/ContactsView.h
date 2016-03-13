@@ -21,6 +21,6 @@
 @property (weak, nonatomic) id<ContactsViewDelegate>delegate ;
 
 -(void)loadContacts:(NSArray *)contactsArray;
-
+-(void)setupView;
 
 @end

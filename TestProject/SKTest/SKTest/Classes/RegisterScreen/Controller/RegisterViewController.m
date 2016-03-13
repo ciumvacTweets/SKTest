@@ -10,6 +10,7 @@
 #import "RegisterHandler.h"
 #import "RegisterView.h"
 #import "RegisterModel.h"
+
 @interface RegisterViewController () <RegisterViewDelegate>
 
 @property (strong, nonatomic) RegisterHandler *handler;
@@ -41,7 +42,7 @@
     self.registerView.delegate = self;
     
     self.model = [[RegisterModel alloc] init];
-    
+    [self.registerView initialSetup];
     // Do any additional setup after loading the view.
 }
 

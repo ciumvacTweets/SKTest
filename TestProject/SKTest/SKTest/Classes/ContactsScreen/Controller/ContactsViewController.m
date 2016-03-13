@@ -34,11 +34,12 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     
     self.contactsView.delegate = self;
-    
+    [self.contactsView setupView];
     // Do any additional setup after loading the view.
 }
 

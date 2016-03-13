@@ -14,7 +14,9 @@
 {
     
     CountryModel *_model;
+    
 }
+
 @property (readonly) CountryView *countryView;
 
 @end
@@ -36,9 +38,12 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.countryView.delegate = self;
+    [self.countryView viewSetup];
+    
     _model.delegate = self;
 
     

@@ -33,10 +33,7 @@
 
 #pragma mark -- Initialization --
 
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-    [self setupView];
-}
+
 
 -(void)setupView {
     

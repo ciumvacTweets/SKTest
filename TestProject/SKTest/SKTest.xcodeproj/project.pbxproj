@@ -17,9 +17,6 @@
 		8413F0901C2C11A6000D44A2 /* IconSpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 8413F08C1C2C11A6000D44A2 /* IconSpot.png */; };
 		8413F0911C2C11A6000D44A2 /* IconSpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 8413F08C1C2C11A6000D44A2 /* IconSpot.png */; };
 		8413F0921C2C11A6000D44A2 /* IconSpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 8413F08C1C2C11A6000D44A2 /* IconSpot.png */; };
-		841492661C4114D6009C2E5D /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492651C4114D6009C2E5D /* HomeScreenViewController.m */; };
-		841492691C41151D009C2E5D /* HomeScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492681C41151D009C2E5D /* HomeScreenView.m */; };
-		8414926B1C413FF9009C2E5D /* HomeScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8414926A1C413FF9009C2E5D /* HomeScreenView.xib */; };
 		8414926F1C4271EB009C2E5D /* homeScreenBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8414926E1C4271EB009C2E5D /* homeScreenBackground.jpg */; };
 		841492731C4282E3009C2E5D /* Bell-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 841492701C4282E3009C2E5D /* Bell-128.png */; };
 		841492741C4282E3009C2E5D /* Movie-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 841492711C4282E3009C2E5D /* Movie-128.png */; };
@@ -110,11 +107,6 @@
 		8413F06D1C2C008C000D44A2 /* SKTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8413F08B1C2C11A6000D44A2 /* iconHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconHome.png; path = ../../../Resources/iconHome.png; sourceTree = "<group>"; };
 		8413F08C1C2C11A6000D44A2 /* IconSpot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconSpot.png; path = ../../../Resources/IconSpot.png; sourceTree = "<group>"; };
-		841492641C4114D6009C2E5D /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeScreenViewController.h; path = HomeScreen/Controller/HomeScreenViewController.h; sourceTree = "<group>"; };
-		841492651C4114D6009C2E5D /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeScreenViewController.m; path = HomeScreen/Controller/HomeScreenViewController.m; sourceTree = "<group>"; };
-		841492671C41151D009C2E5D /* HomeScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeScreenView.h; path = HomeScreen/View/HomeScreenView.h; sourceTree = "<group>"; };
-		841492681C41151D009C2E5D /* HomeScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeScreenView.m; path = HomeScreen/View/HomeScreenView.m; sourceTree = "<group>"; };
-		8414926A1C413FF9009C2E5D /* HomeScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeScreenView.xib; path = HomeScreen/View/HomeScreenView.xib; sourceTree = "<group>"; };
 		8414926E1C4271EB009C2E5D /* homeScreenBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homeScreenBackground.jpg; sourceTree = "<group>"; };
 		841492701C4282E3009C2E5D /* Bell-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bell-128.png"; sourceTree = "<group>"; };
 		841492711C4282E3009C2E5D /* Movie-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Movie-128.png"; sourceTree = "<group>"; };
@@ -196,8 +188,7 @@
 		8413F0401C2C008C000D44A2 = {
 			isa = PBXGroup;
 			children = (
-				8463D8F61C335F2E0079742C /* AddressBookUI.framework */,
-				8463D8E71C32BC9B0079742C /* AddressBook.framework */,
+				84950FCD1C95942000738FF0 /* Frameworks */,
 				8413F04A1C2C008C000D44A2 /* Products */,
 				8413F07F1C2C0C88000D44A2 /* Resources */,
 				8413F04B1C2C008C000D44A2 /* SKTest */,
@@ -253,42 +244,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		841492601C41142C009C2E5D /* HomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				841492631C41146E009C2E5D /* Controller */,
-				841492621C411457009C2E5D /* View */,
-				841492611C41144A009C2E5D /* Model */,
-			);
-			name = HomeScreen;
-			sourceTree = "<group>";
-		};
-		841492611C41144A009C2E5D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		841492621C411457009C2E5D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				841492671C41151D009C2E5D /* HomeScreenView.h */,
-				841492681C41151D009C2E5D /* HomeScreenView.m */,
-				8414926A1C413FF9009C2E5D /* HomeScreenView.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		841492631C41146E009C2E5D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				841492641C4114D6009C2E5D /* HomeScreenViewController.h */,
-				841492651C4114D6009C2E5D /* HomeScreenViewController.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		845D2BA01C2C143400D6CE79 /* mainMenuScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +282,15 @@
 			name = ContactCell;
 			sourceTree = "<group>";
 		};
+		84950FCD1C95942000738FF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8463D8F61C335F2E0079742C /* AddressBookUI.framework */,
+				8463D8E71C32BC9B0079742C /* AddressBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84E3A4711C2C96CE00ED97DF /* APIRequests */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +320,6 @@
 		84E3A4781C2EC1D000ED97DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				841492601C41142C009C2E5D /* HomeScreen */,
 				84E3A4711C2C96CE00ED97DF /* APIRequests */,
 				84E3A4831C2EE9A800ED97DF /* ContactsScreen */,
 				84E3A4821C2EE97A00ED97DF /* CountriesScreen */,
@@ -411,7 +374,6 @@
 			isa = PBXGroup;
 			children = (
 				84E3A4861C2EE9F500ED97DF /* Controller */,
-				84E3A4851C2EE9D600ED97DF /* Handler */,
 				84E3A4841C2EE9C400ED97DF /* Model */,
 				84E3A4871C2EEA0500ED97DF /* View */,
 			);
@@ -425,13 +387,6 @@
 				8463D8E01C32A1920079742C /* ContactsModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		84E3A4851C2EE9D600ED97DF /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Handler;
 			sourceTree = "<group>";
 		};
 		84E3A4861C2EE9F500ED97DF /* Controller */ = {
@@ -647,7 +602,6 @@
 				8463D8F31C330A550079742C /* ContactsCell.xib in Resources */,
 				8463D8EA1C32D5C80079742C /* Check-128.png in Resources */,
 				84E3A4B01C2F1F6400ED97DF /* Background2.jpg in Resources */,
-				8414926B1C413FF9009C2E5D /* HomeScreenView.xib in Resources */,
 				841492741C4282E3009C2E5D /* Movie-128.png in Resources */,
 				84E3A4AC1C2F1CA400ED97DF /* RegisterView.xib in Resources */,
 				8463D8F51C33114A0079742C /* Check-128unchecked.png in Resources */,
@@ -694,14 +648,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				842B4D001C304E6B00AB497E /* RegisterModel.m in Sources */,
-				841492661C4114D6009C2E5D /* HomeScreenViewController.m in Sources */,
 				8463D8DE1C32A12B0079742C /* ContactsViewController.m in Sources */,
 				84E3A4901C2F07EE00ED97DF /* SKCustomTextfield.m in Sources */,
 				8463D8D11C3140AB0079742C /* CountryModel.m in Sources */,
 				8413F0511C2C008C000D44A2 /* AppDelegate.m in Sources */,
 				84E3A4741C2C978000ED97DF /* CountryAPI.m in Sources */,
 				845D2BA91C2C14CA00D6CE79 /* MainMenuViewController.m in Sources */,
-				841492691C41151D009C2E5D /* HomeScreenView.m in Sources */,
 				84E3A4A81C2F1C1400ED97DF /* RegisterView.m in Sources */,
 				8463D8D41C3142620079742C /* CountryView.m in Sources */,
 				8463D8F21C330A550079742C /* ContactsCell.m in Sources */,

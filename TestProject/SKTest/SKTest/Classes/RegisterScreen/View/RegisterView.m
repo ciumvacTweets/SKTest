@@ -40,15 +40,12 @@
 
 #pragma mark -- Initialization --
 
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-
+-(void)initialSetup {
+    
     [self setTextFieldDelegates];
     _validatedTextFields = 0;
     [_backgroundImageView addMotion];
     [_nextButton setEnabled:NO];
-   
-    
 }
 
 -(void)setTextFieldDelegates  {
